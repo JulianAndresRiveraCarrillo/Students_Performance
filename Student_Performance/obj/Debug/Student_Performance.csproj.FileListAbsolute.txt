@@ -1,0 +1,11 @@
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csprojAssemblyReference.cache
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.Gui.PrincipalWindow.resources
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.Properties.Resources.resources
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.GenerateResource.cache
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.CoreCompileInputs.cache
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Student_Performance.exe.config
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Student_Performance.exe
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Student_Performance.pdb
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.Gui.FilterControl.resources
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.exe
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.pdb

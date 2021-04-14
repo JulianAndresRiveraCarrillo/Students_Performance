@@ -19,10 +19,11 @@ namespace Student_Performance.Gui
             string path = loadData.FileName;
             manager.createTable(path);
 
-            if(manager.Table != null)
+            if (manager.Table != null)
             {
                 dataView.DataSource = manager.Table;
             }
         }
+
     }
 }
