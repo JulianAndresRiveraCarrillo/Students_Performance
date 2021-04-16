@@ -36,5 +36,9 @@ namespace Student_Performance.Gui
         {
             manager.filterBySex(file, "female");
         }
+
+        private void etniBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByRace(file, etniBox.Text);
+
+        private void parentBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByPLevel(file, parentBox.Text);
     }
 }
