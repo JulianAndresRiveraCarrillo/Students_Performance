@@ -88,5 +88,59 @@ namespace Student_Performance.Gui
         {
             manager.filterByTest(file,testBox.Text);
         }
+
+        private void mathCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if(mathCheck.Checked == true)
+            {
+                OK3.Enabled = true;
+                minBox.Enabled = true;
+                maxBox.Enabled = true;
+
+                readingCheck.Checked = false;
+                writingCheck.Checked = false;
+            }
+        }
+
+        private void readingChech_CheckedChanged(object sender, EventArgs e)
+        {
+            if (readingCheck.Checked == true)
+            {
+                OK3.Enabled = true;
+                minBox.Enabled = true;
+                maxBox.Enabled = true;
+
+                mathCheck.Checked = false;
+                writingCheck.Checked = false;
+            }
+        }
+
+        private void writingCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (writingCheck.Checked == true)
+            {
+                OK3.Enabled = true;
+                minBox.Enabled = true;
+                maxBox.Enabled = true;
+
+                mathCheck.Checked = false;
+                readingCheck.Checked = false;
+            }
+        }
+
+        private void OK3_Click(object sender, EventArgs e)
+        {
+            if (mathCheck.Checked == true)
+            {
+                manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 5);
+            } else if (readingCheck.Checked == true)
+            {
+                manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 6);
+            }
+            else
+            {
+                manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 7);
+            }
+        }
     }
 }

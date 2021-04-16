@@ -40,6 +40,13 @@ namespace Student_Performance.Gui
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.OK3 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.maxBox = new System.Windows.Forms.TextBox();
+            this.minBox = new System.Windows.Forms.TextBox();
+            this.writingCheck = new System.Windows.Forms.CheckBox();
+            this.readingCheck = new System.Windows.Forms.CheckBox();
+            this.mathCheck = new System.Windows.Forms.CheckBox();
             this.OK2 = new System.Windows.Forms.Button();
             this.OK1 = new System.Windows.Forms.Button();
             this.testLB = new System.Windows.Forms.Label();
@@ -83,7 +90,7 @@ namespace Student_Performance.Gui
             // 
             this.femaleButton.AutoSize = true;
             this.femaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.femaleButton.Location = new System.Drawing.Point(3, 32);
+            this.femaleButton.Location = new System.Drawing.Point(6, 31);
             this.femaleButton.Name = "femaleButton";
             this.femaleButton.Size = new System.Drawing.Size(72, 20);
             this.femaleButton.TabIndex = 1;
@@ -115,7 +122,7 @@ namespace Student_Performance.Gui
             "group C",
             "group D",
             "group E"});
-            this.etniBox.Location = new System.Drawing.Point(125, 6);
+            this.etniBox.Location = new System.Drawing.Point(113, 6);
             this.etniBox.Name = "etniBox";
             this.etniBox.Size = new System.Drawing.Size(128, 21);
             this.etniBox.Sorted = true;
@@ -160,6 +167,13 @@ namespace Student_Performance.Gui
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.OK3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.maxBox);
+            this.tabPage1.Controls.Add(this.minBox);
+            this.tabPage1.Controls.Add(this.writingCheck);
+            this.tabPage1.Controls.Add(this.readingCheck);
+            this.tabPage1.Controls.Add(this.mathCheck);
             this.tabPage1.Controls.Add(this.OK2);
             this.tabPage1.Controls.Add(this.OK1);
             this.tabPage1.Controls.Add(this.testLB);
@@ -178,10 +192,79 @@ namespace Student_Performance.Gui
             this.tabPage1.Text = "Filtrar";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // OK3
+            // 
+            this.OK3.Enabled = false;
+            this.OK3.Location = new System.Drawing.Point(629, 38);
+            this.OK3.Name = "OK3";
+            this.OK3.Size = new System.Drawing.Size(37, 19);
+            this.OK3.TabIndex = 15;
+            this.OK3.Text = "OK";
+            this.OK3.UseVisualStyleBackColor = true;
+            this.OK3.Click += new System.EventHandler(this.OK3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(640, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "--";
+            // 
+            // maxBox
+            // 
+            this.maxBox.Enabled = false;
+            this.maxBox.Location = new System.Drawing.Point(672, 19);
+            this.maxBox.Name = "maxBox";
+            this.maxBox.Size = new System.Drawing.Size(40, 20);
+            this.maxBox.TabIndex = 13;
+            // 
+            // minBox
+            // 
+            this.minBox.Enabled = false;
+            this.minBox.Location = new System.Drawing.Point(583, 19);
+            this.minBox.Name = "minBox";
+            this.minBox.Size = new System.Drawing.Size(40, 20);
+            this.minBox.TabIndex = 12;
+            // 
+            // writingCheck
+            // 
+            this.writingCheck.AutoSize = true;
+            this.writingCheck.Location = new System.Drawing.Point(691, 0);
+            this.writingCheck.Name = "writingCheck";
+            this.writingCheck.Size = new System.Drawing.Size(59, 17);
+            this.writingCheck.TabIndex = 11;
+            this.writingCheck.Text = "Writing";
+            this.writingCheck.UseVisualStyleBackColor = true;
+            this.writingCheck.CheckedChanged += new System.EventHandler(this.writingCheck_CheckedChanged);
+            // 
+            // readingCheck
+            // 
+            this.readingCheck.AutoSize = true;
+            this.readingCheck.Location = new System.Drawing.Point(620, 0);
+            this.readingCheck.Name = "readingCheck";
+            this.readingCheck.Size = new System.Drawing.Size(66, 17);
+            this.readingCheck.TabIndex = 10;
+            this.readingCheck.Text = "Reading";
+            this.readingCheck.UseVisualStyleBackColor = true;
+            this.readingCheck.CheckedChanged += new System.EventHandler(this.readingChech_CheckedChanged);
+            // 
+            // mathCheck
+            // 
+            this.mathCheck.AutoSize = true;
+            this.mathCheck.Location = new System.Drawing.Point(564, 0);
+            this.mathCheck.Name = "mathCheck";
+            this.mathCheck.Size = new System.Drawing.Size(50, 17);
+            this.mathCheck.TabIndex = 9;
+            this.mathCheck.Text = "Math";
+            this.mathCheck.UseVisualStyleBackColor = true;
+            this.mathCheck.CheckedChanged += new System.EventHandler(this.mathCheck_CheckedChanged);
+            // 
             // OK2
             // 
             this.OK2.Enabled = false;
-            this.OK2.Location = new System.Drawing.Point(480, 39);
+            this.OK2.Location = new System.Drawing.Point(494, 30);
             this.OK2.Name = "OK2";
             this.OK2.Size = new System.Drawing.Size(30, 21);
             this.OK2.TabIndex = 8;
@@ -192,7 +275,7 @@ namespace Student_Performance.Gui
             // OK1
             // 
             this.OK1.Enabled = false;
-            this.OK1.Location = new System.Drawing.Point(356, 39);
+            this.OK1.Location = new System.Drawing.Point(343, 30);
             this.OK1.Name = "OK1";
             this.OK1.Size = new System.Drawing.Size(30, 21);
             this.OK1.TabIndex = 7;
@@ -204,7 +287,7 @@ namespace Student_Performance.Gui
             // 
             this.testLB.AutoSize = true;
             this.testLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.testLB.Location = new System.Drawing.Point(451, 23);
+            this.testLB.Location = new System.Drawing.Point(403, 34);
             this.testLB.Name = "testLB";
             this.testLB.Size = new System.Drawing.Size(85, 13);
             this.testLB.TabIndex = 6;
@@ -214,7 +297,7 @@ namespace Student_Performance.Gui
             // 
             this.lunchLB.AutoSize = true;
             this.lunchLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lunchLB.Location = new System.Drawing.Point(353, 23);
+            this.lunchLB.Location = new System.Drawing.Point(290, 34);
             this.lunchLB.Name = "lunchLB";
             this.lunchLB.Size = new System.Drawing.Size(37, 13);
             this.lunchLB.TabIndex = 5;
@@ -222,7 +305,7 @@ namespace Student_Performance.Gui
             // 
             // testBox
             // 
-            this.testBox.Location = new System.Drawing.Point(436, 3);
+            this.testBox.Location = new System.Drawing.Point(406, 4);
             this.testBox.Name = "testBox";
             this.testBox.Size = new System.Drawing.Size(118, 20);
             this.testBox.TabIndex = 4;
@@ -230,7 +313,7 @@ namespace Student_Performance.Gui
             // 
             // lunchBox
             // 
-            this.lunchBox.Location = new System.Drawing.Point(312, 3);
+            this.lunchBox.Location = new System.Drawing.Point(270, 4);
             this.lunchBox.Name = "lunchBox";
             this.lunchBox.Size = new System.Drawing.Size(118, 20);
             this.lunchBox.TabIndex = 3;
@@ -246,7 +329,7 @@ namespace Student_Performance.Gui
             "high school",
             "some high school",
             "bachelor\'s degree"});
-            this.parentBox.Location = new System.Drawing.Point(125, 31);
+            this.parentBox.Location = new System.Drawing.Point(113, 31);
             this.parentBox.Name = "parentBox";
             this.parentBox.Size = new System.Drawing.Size(128, 21);
             this.parentBox.TabIndex = 2;
@@ -318,5 +401,12 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.TextBox lunchBox;
         private System.Windows.Forms.Button OK2;
         private System.Windows.Forms.Button OK1;
+        private System.Windows.Forms.CheckBox writingCheck;
+        private System.Windows.Forms.CheckBox readingCheck;
+        private System.Windows.Forms.CheckBox mathCheck;
+        private System.Windows.Forms.Button OK3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox maxBox;
+        private System.Windows.Forms.TextBox minBox;
     }
 }
