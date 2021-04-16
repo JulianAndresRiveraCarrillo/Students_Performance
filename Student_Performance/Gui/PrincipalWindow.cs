@@ -7,6 +7,7 @@ namespace Student_Performance.Gui
     public partial class PrincipalWindow : Form
     {
         private DataManager manager = new DataManager();
+        private string file;
 
         public PrincipalWindow()
         {
@@ -17,6 +18,7 @@ namespace Student_Performance.Gui
         {
             loadData.ShowDialog();
             string path = loadData.FileName;
+            file = path;
             manager.createTable(path);
 
             if (manager.Table != null)
@@ -25,5 +27,14 @@ namespace Student_Performance.Gui
             }
         }
 
+        private void maleButton_CheckedChanged(object sender, EventArgs e)
+        {
+            manager.filterBySex(file, "male");
+        }
+
+        private void femaleButton_CheckedChanged(object sender, EventArgs e)
+        {
+            manager.filterBySex(file, "female");
+        }
     }
 }

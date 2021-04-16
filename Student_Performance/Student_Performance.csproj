@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gui\FilterControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Gui\FilterControl.Designer.cs">
-      <DependentUpon>FilterControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\PrincipalWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,9 +55,6 @@
     <Compile Include="Gui\Program.cs" />
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Gui\FilterControl.resx">
-      <DependentUpon>FilterControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Gui\PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
     </EmbeddedResource>
