@@ -29,6 +29,7 @@ namespace Student_Performance.Gui
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalWindow));
             this.dataView = new System.Windows.Forms.DataGridView();
             this.loadBT = new System.Windows.Forms.Button();
             this.loadData = new System.Windows.Forms.OpenFileDialog();
@@ -39,9 +40,15 @@ namespace Student_Performance.Gui
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.OK2 = new System.Windows.Forms.Button();
+            this.OK1 = new System.Windows.Forms.Button();
+            this.testLB = new System.Windows.Forms.Label();
+            this.lunchLB = new System.Windows.Forms.Label();
+            this.testBox = new System.Windows.Forms.TextBox();
+            this.lunchBox = new System.Windows.Forms.TextBox();
+            this.parentBox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.parentBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -100,6 +107,7 @@ namespace Student_Performance.Gui
             // 
             // etniBox
             // 
+            this.etniBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.etniBox.FormattingEnabled = true;
             this.etniBox.Items.AddRange(new object[] {
             "group A",
@@ -107,7 +115,7 @@ namespace Student_Performance.Gui
             "group C",
             "group D",
             "group E"});
-            this.etniBox.Location = new System.Drawing.Point(93, 7);
+            this.etniBox.Location = new System.Drawing.Point(125, 6);
             this.etniBox.Name = "etniBox";
             this.etniBox.Size = new System.Drawing.Size(128, 21);
             this.etniBox.Sorted = true;
@@ -128,7 +136,7 @@ namespace Student_Performance.Gui
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(764, 30);
             this.tableLayoutPanel2.TabIndex = 4;
             // 
@@ -152,6 +160,12 @@ namespace Student_Performance.Gui
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.OK2);
+            this.tabPage1.Controls.Add(this.OK1);
+            this.tabPage1.Controls.Add(this.testLB);
+            this.tabPage1.Controls.Add(this.lunchLB);
+            this.tabPage1.Controls.Add(this.testBox);
+            this.tabPage1.Controls.Add(this.lunchBox);
             this.tabPage1.Controls.Add(this.parentBox);
             this.tabPage1.Controls.Add(this.etniBox);
             this.tabPage1.Controls.Add(this.femaleButton);
@@ -163,6 +177,81 @@ namespace Student_Performance.Gui
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Filtrar";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // OK2
+            // 
+            this.OK2.Enabled = false;
+            this.OK2.Location = new System.Drawing.Point(480, 39);
+            this.OK2.Name = "OK2";
+            this.OK2.Size = new System.Drawing.Size(30, 21);
+            this.OK2.TabIndex = 8;
+            this.OK2.Text = "OK";
+            this.OK2.UseVisualStyleBackColor = true;
+            this.OK2.Click += new System.EventHandler(this.OK2_Click);
+            // 
+            // OK1
+            // 
+            this.OK1.Enabled = false;
+            this.OK1.Location = new System.Drawing.Point(356, 39);
+            this.OK1.Name = "OK1";
+            this.OK1.Size = new System.Drawing.Size(30, 21);
+            this.OK1.TabIndex = 7;
+            this.OK1.Text = "OK";
+            this.OK1.UseVisualStyleBackColor = true;
+            this.OK1.Click += new System.EventHandler(this.OK1_Click);
+            // 
+            // testLB
+            // 
+            this.testLB.AutoSize = true;
+            this.testLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.testLB.Location = new System.Drawing.Point(451, 23);
+            this.testLB.Name = "testLB";
+            this.testLB.Size = new System.Drawing.Size(85, 13);
+            this.testLB.TabIndex = 6;
+            this.testLB.Text = "Test Preparation";
+            // 
+            // lunchLB
+            // 
+            this.lunchLB.AutoSize = true;
+            this.lunchLB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lunchLB.Location = new System.Drawing.Point(353, 23);
+            this.lunchLB.Name = "lunchLB";
+            this.lunchLB.Size = new System.Drawing.Size(37, 13);
+            this.lunchLB.TabIndex = 5;
+            this.lunchLB.Text = "Lunch";
+            // 
+            // testBox
+            // 
+            this.testBox.Location = new System.Drawing.Point(436, 3);
+            this.testBox.Name = "testBox";
+            this.testBox.Size = new System.Drawing.Size(118, 20);
+            this.testBox.TabIndex = 4;
+            this.testBox.TextChanged += new System.EventHandler(this.testBox_TextChanged);
+            // 
+            // lunchBox
+            // 
+            this.lunchBox.Location = new System.Drawing.Point(312, 3);
+            this.lunchBox.Name = "lunchBox";
+            this.lunchBox.Size = new System.Drawing.Size(118, 20);
+            this.lunchBox.TabIndex = 3;
+            this.lunchBox.TextChanged += new System.EventHandler(this.lunchBox_TextChanged);
+            // 
+            // parentBox
+            // 
+            this.parentBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.parentBox.FormattingEnabled = true;
+            this.parentBox.Items.AddRange(new object[] {
+            "some college",
+            "associate\'s degree",
+            "high school",
+            "some high school",
+            "bachelor\'s degree"});
+            this.parentBox.Location = new System.Drawing.Point(125, 31);
+            this.parentBox.Name = "parentBox";
+            this.parentBox.Size = new System.Drawing.Size(128, 21);
+            this.parentBox.TabIndex = 2;
+            this.parentBox.Text = "Paren Level";
+            this.parentBox.SelectedIndexChanged += new System.EventHandler(this.parentBox_SelectedIndexChanged);
             // 
             // tabPage2
             // 
@@ -185,22 +274,6 @@ namespace Student_Performance.Gui
             this.label1.TabIndex = 0;
             this.label1.Text = "Aqui se incluirá la funcion para reportes graficos";
             // 
-            // parentBox
-            // 
-            this.parentBox.FormattingEnabled = true;
-            this.parentBox.Items.AddRange(new object[] {
-            "some college",
-            "associate\'s degree",
-            "high school",
-            "some high school",
-            "bachelor\'s degree"});
-            this.parentBox.Location = new System.Drawing.Point(93, 30);
-            this.parentBox.Name = "parentBox";
-            this.parentBox.Size = new System.Drawing.Size(128, 21);
-            this.parentBox.TabIndex = 2;
-            this.parentBox.Text = "Paren Level";
-            this.parentBox.SelectedIndexChanged += new System.EventHandler(this.parentBox_SelectedIndexChanged);
-            // 
             // PrincipalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,6 +282,7 @@ namespace Student_Performance.Gui
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.dataView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrincipalWindow";
             this.Text = "PrincipalWindow ::PW";
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).EndInit();
@@ -238,5 +312,11 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox parentBox;
+        private System.Windows.Forms.Label testLB;
+        private System.Windows.Forms.Label lunchLB;
+        private System.Windows.Forms.TextBox testBox;
+        private System.Windows.Forms.TextBox lunchBox;
+        private System.Windows.Forms.Button OK2;
+        private System.Windows.Forms.Button OK1;
     }
 }

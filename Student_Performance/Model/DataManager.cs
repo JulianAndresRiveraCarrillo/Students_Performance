@@ -151,5 +151,73 @@ namespace Student_Performance.Model
             }
         }
 
+        public void filterByLunch(string path, string filter)
+        {
+            table.Clear();
+            string[] text = System.IO.File.ReadAllLines(path);
+
+            if (text.Length > 1)
+            {
+                for (int i = 1; i < text.Length; i++)
+                {
+                    string[] data = Regex.Split(text[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+
+                    if (data.Length > 0)
+                    {
+                        if (data[3].ToString().Replace("\"", " ").Trim().Equals(filter))
+                        {
+                            DataRow row = table.NewRow();
+                            for (int j = 0; j < data.Length; j++)
+                            {
+                                try
+                                {
+                                    row[j] = data[j].ToString().Replace("\"", " ").Trim();
+                                }
+                                catch (Exception)
+                                {
+                                    Console.WriteLine("ERROR!");
+                                }
+                            }
+                            table.Rows.Add(row);
+                        }
+                    }
+                }
+            }
+        }
+
+        public void filterByTest(string path, string filter)
+        {
+            table.Clear();
+            string[] text = System.IO.File.ReadAllLines(path);
+
+            if (text.Length > 1)
+            {
+                for (int i = 1; i < text.Length; i++)
+                {
+                    string[] data = Regex.Split(text[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+
+                    if (data.Length > 0)
+                    {
+                        if (data[4].ToString().Replace("\"", " ").Trim().Equals(filter))
+                        {
+                            DataRow row = table.NewRow();
+                            for (int j = 0; j < data.Length; j++)
+                            {
+                                try
+                                {
+                                    row[j] = data[j].ToString().Replace("\"", " ").Trim();
+                                }
+                                catch (Exception)
+                                {
+                                    Console.WriteLine("ERROR!");
+                                }
+                            }
+                            table.Rows.Add(row);
+                        }
+                    }
+                }
+            }
+        }
+
     }
 }
