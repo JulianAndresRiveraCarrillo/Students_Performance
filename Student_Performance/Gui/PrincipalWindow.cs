@@ -182,6 +182,7 @@ namespace Student_Performance.Gui
         private void rep4BT_Click(object sender, EventArgs e)
         {
             Report rep = new Report(file, 3, 4);
+            rep.Show();
         }
 
         private void rep5BT_Click(object sender, EventArgs e)

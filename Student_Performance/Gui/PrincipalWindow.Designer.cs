@@ -30,7 +30,6 @@ namespace Student_Performance.Gui
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalWindow));
-            this.dataView = new System.Windows.Forms.DataGridView();
             this.loadBT = new System.Windows.Forms.Button();
             this.loadData = new System.Windows.Forms.OpenFileDialog();
             this.femaleButton = new System.Windows.Forms.RadioButton();
@@ -60,22 +59,14 @@ namespace Student_Performance.Gui
             this.rep3BT = new System.Windows.Forms.Button();
             this.rep2BT = new System.Windows.Forms.Button();
             this.rep1BT = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
+            this.dataView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataView
-            // 
-            this.dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataView.Enabled = false;
-            this.dataView.Location = new System.Drawing.Point(12, 93);
-            this.dataView.Name = "dataView";
-            this.dataView.Size = new System.Drawing.Size(764, 314);
-            this.dataView.TabIndex = 0;
             // 
             // loadBT
             // 
@@ -420,31 +411,37 @@ namespace Student_Performance.Gui
             this.rep1BT.UseVisualStyleBackColor = true;
             this.rep1BT.Click += new System.EventHandler(this.rep1BT_Click);
             // 
+            // dataView
+            // 
+            this.dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataView.Location = new System.Drawing.Point(12, 93);
+            this.dataView.Name = "dataView";
+            this.dataView.Size = new System.Drawing.Size(760, 314);
+            this.dataView.TabIndex = 6;
+            // 
             // PrincipalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 449);
+            this.Controls.Add(this.dataView);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.dataView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrincipalWindow";
             this.Text = "PrincipalWindow ::PW";
-            ((System.ComponentModel.ISupportInitialize)(this.dataView)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dataView;
         private System.Windows.Forms.Button loadBT;
         private System.Windows.Forms.OpenFileDialog loadData;
         private System.Windows.Forms.RadioButton femaleButton;
@@ -474,5 +471,6 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.Button rep3BT;
         private System.Windows.Forms.Button rep2BT;
         private System.Windows.Forms.Button rep1BT;
+        private System.Windows.Forms.DataGridView dataView;
     }
 }
