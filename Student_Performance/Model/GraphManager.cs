@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Text.RegularExpressions;
 
 namespace Student_Performance.Model
 {
@@ -21,45 +22,42 @@ namespace Student_Performance.Model
             get => info;
         }
 
-        public void generateGraph(DataTable table, string at1)
+        public void GenerateGraph(string path, int at)
         {
-            DataRowCollection rows = table.Rows;
-            int numColumns = table.Columns.Count;
-
-            if (rows.Count > 0)
-            {
-                for (int i = 0; i < rows.Count; i++)
+            string[] lines = System.IO.File.ReadAllLines(path);
+            if (lines.Length > 0)
+            { 
+                for (int i = 1; i < 50; i++)
                 {
-                    DataRow row = rows[i];
-
-                    for(int j = 0; j < numColumns; j++)
+                    //This will ignore commas between double quotes in the CSV file
+                    string[] dataLine = Regex.Split(lines[i], ",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)");
+                    for (int j = 0; j < dataLine.Length; j++)
                     {
                         if (info.Count == 0)
                         {
-                            info.Add(new Student(row[at1].ToString(),1));
+                            info.Add(new Student(dataLine[at].Replace("\"", " ").Trim(), 1));
                         }
                         else
                         {
                             bool found = false;
-                            for (int k = 0; k < info.Count; k++)
+
+                            for (int k = 0; k < info.Count && !found; k++)
                             {
-                                if (info[k].V1 == row[at1].ToString())
+                                if (info[k].V1 == dataLine[at].Replace("\"", " ").Trim())
                                 {
                                     info[k].V2++;
                                     found = true;
                                 }
                             }
+
                             if (!found)
                             {
-                                info.Add(new Student(row[at1].ToString(), 1));
+                                info.Add(new Student(dataLine[at].Replace("\"", " ").Trim(), 1));
                             }
                         }
                     }
                 }
             }
         }
-
-
-
     }
 }

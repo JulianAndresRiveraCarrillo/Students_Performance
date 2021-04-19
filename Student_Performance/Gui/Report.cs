@@ -12,11 +12,11 @@ namespace Student_Performance.Gui
         private GraphManager gm;
         private int report;
 
-        public Report(DataTable table, string at, int rep)
+        public Report(string file, int at, int rep)
         {
             InitializeComponent();
             gm = new GraphManager();
-            gm.generateGraph(table, at);
+            gm.GenerateGraph(file, at);
             report = rep;
         }
 

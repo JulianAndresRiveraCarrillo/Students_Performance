@@ -163,31 +163,30 @@ namespace Student_Performance.Gui
 
         private void rep1BT_Click(object sender, EventArgs e)
         {
-            Report rep = new Report(manager.Table, manager.Table.Columns[0].ToString(), 1);
+            Report rep = new Report(file, 0, 1);
             rep.Show();
         }
 
         private void rep2BT_Click(object sender, EventArgs e)
         {
-            Report rep = new Report(manager.Table, manager.Table.Columns[1].ToString(), 2);
+            Report rep = new Report(file, 1, 2);
             rep.Show();
         }
 
         private void rep3BT_Click(object sender, EventArgs e)
         {
-            Report rep = new Report(manager.Table, manager.Table.Columns[2].ToString(), 3);
+            Report rep = new Report(file, 2, 3);
             rep.Show();
         }
 
         private void rep4BT_Click(object sender, EventArgs e)
         {
-            Report rep = new Report(manager.Table, manager.Table.Columns[3].ToString(), 4);
-            rep.Show();
+            Report rep = new Report(file, 3, 4);
         }
 
         private void rep5BT_Click(object sender, EventArgs e)
         {
-            Report rep = new Report(manager.Table, manager.Table.Columns[4].ToString(), 5);
+            Report rep = new Report(file, 4, 5);
             rep.Show();
         }
     }
