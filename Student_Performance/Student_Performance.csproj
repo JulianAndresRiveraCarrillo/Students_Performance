@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,10 +54,21 @@
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\Program.cs" />
+    <Compile Include="Gui\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\DataManager.cs" />
+    <Compile Include="Model\GraphManager.cs" />
+    <Compile Include="Model\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gui\PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

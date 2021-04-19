@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
 using Student_Performance.Model;
 
@@ -6,12 +7,13 @@ namespace Student_Performance.Gui
 {
     public partial class PrincipalWindow : Form
     {
-        private DataManager manager = new DataManager();
+        private DataManager  manager = new DataManager();
         private string file;
 
         public PrincipalWindow()
         {
             InitializeComponent();
+            
         }
 
         private void loadBT_Click(object sender, EventArgs e)
@@ -25,6 +27,21 @@ namespace Student_Performance.Gui
             {
                 dataView.DataSource = manager.Table;
             }
+            maleButton.Enabled = true;
+            femaleButton.Enabled = true;
+            etniBox.Enabled = true;
+            parentBox.Enabled = true;
+            lunchBox.Enabled = true;
+            testBox.Enabled = true;
+            mathCheck.Enabled = true;
+            readingCheck.Enabled = true;
+            writingCheck.Enabled = true;
+
+            rep1BT.Enabled = true;
+            rep2BT.Enabled = true;
+            rep3BT.Enabled = true;
+            rep4BT.Enabled = true;
+            rep5BT.Enabled = true;
         }
 
         private void maleButton_CheckedChanged(object sender, EventArgs e)
@@ -73,7 +90,7 @@ namespace Student_Performance.Gui
         {
             AutoCompleteStringCollection data = new AutoCompleteStringCollection();
 
-            data.Add("none"); 
+            data.Add("none");
             data.Add("completed");
 
             return data;
@@ -86,12 +103,12 @@ namespace Student_Performance.Gui
 
         private void OK2_Click(object sender, EventArgs e)
         {
-            manager.filterByTest(file,testBox.Text);
+            manager.filterByTest(file, testBox.Text);
         }
 
         private void mathCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if(mathCheck.Checked == true)
+            if (mathCheck.Checked == true)
             {
                 OK3.Enabled = true;
                 minBox.Enabled = true;
@@ -133,7 +150,8 @@ namespace Student_Performance.Gui
             if (mathCheck.Checked == true)
             {
                 manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 5);
-            } else if (readingCheck.Checked == true)
+            }
+            else if (readingCheck.Checked == true)
             {
                 manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 6);
             }
@@ -141,6 +159,36 @@ namespace Student_Performance.Gui
             {
                 manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 7);
             }
+        }
+
+        private void rep1BT_Click(object sender, EventArgs e)
+        {
+            Report rep = new Report(manager.Table, manager.Table.Columns[0].ToString(), 1);
+            rep.Show();
+        }
+
+        private void rep2BT_Click(object sender, EventArgs e)
+        {
+            Report rep = new Report(manager.Table, manager.Table.Columns[1].ToString(), 2);
+            rep.Show();
+        }
+
+        private void rep3BT_Click(object sender, EventArgs e)
+        {
+            Report rep = new Report(manager.Table, manager.Table.Columns[2].ToString(), 3);
+            rep.Show();
+        }
+
+        private void rep4BT_Click(object sender, EventArgs e)
+        {
+            Report rep = new Report(manager.Table, manager.Table.Columns[3].ToString(), 4);
+            rep.Show();
+        }
+
+        private void rep5BT_Click(object sender, EventArgs e)
+        {
+            Report rep = new Report(manager.Table, manager.Table.Columns[4].ToString(), 5);
+            rep.Show();
         }
     }
 }

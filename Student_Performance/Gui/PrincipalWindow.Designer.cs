@@ -55,7 +55,11 @@ namespace Student_Performance.Gui
             this.lunchBox = new System.Windows.Forms.TextBox();
             this.parentBox = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
+            this.rep5BT = new System.Windows.Forms.Button();
+            this.rep4BT = new System.Windows.Forms.Button();
+            this.rep3BT = new System.Windows.Forms.Button();
+            this.rep2BT = new System.Windows.Forms.Button();
+            this.rep1BT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,6 +71,7 @@ namespace Student_Performance.Gui
             // dataView
             // 
             this.dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataView.Enabled = false;
             this.dataView.Location = new System.Drawing.Point(12, 93);
             this.dataView.Name = "dataView";
             this.dataView.Size = new System.Drawing.Size(764, 314);
@@ -89,6 +94,7 @@ namespace Student_Performance.Gui
             // femaleButton
             // 
             this.femaleButton.AutoSize = true;
+            this.femaleButton.Enabled = false;
             this.femaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.femaleButton.Location = new System.Drawing.Point(6, 31);
             this.femaleButton.Name = "femaleButton";
@@ -102,6 +108,7 @@ namespace Student_Performance.Gui
             // maleButton
             // 
             this.maleButton.AutoSize = true;
+            this.maleButton.Enabled = false;
             this.maleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maleButton.Location = new System.Drawing.Point(6, 6);
             this.maleButton.Name = "maleButton";
@@ -114,6 +121,7 @@ namespace Student_Performance.Gui
             // 
             // etniBox
             // 
+            this.etniBox.Enabled = false;
             this.etniBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.etniBox.FormattingEnabled = true;
             this.etniBox.Items.AddRange(new object[] {
@@ -231,6 +239,7 @@ namespace Student_Performance.Gui
             // writingCheck
             // 
             this.writingCheck.AutoSize = true;
+            this.writingCheck.Enabled = false;
             this.writingCheck.Location = new System.Drawing.Point(691, 0);
             this.writingCheck.Name = "writingCheck";
             this.writingCheck.Size = new System.Drawing.Size(59, 17);
@@ -242,6 +251,7 @@ namespace Student_Performance.Gui
             // readingCheck
             // 
             this.readingCheck.AutoSize = true;
+            this.readingCheck.Enabled = false;
             this.readingCheck.Location = new System.Drawing.Point(620, 0);
             this.readingCheck.Name = "readingCheck";
             this.readingCheck.Size = new System.Drawing.Size(66, 17);
@@ -253,6 +263,7 @@ namespace Student_Performance.Gui
             // mathCheck
             // 
             this.mathCheck.AutoSize = true;
+            this.mathCheck.Enabled = false;
             this.mathCheck.Location = new System.Drawing.Point(564, 0);
             this.mathCheck.Name = "mathCheck";
             this.mathCheck.Size = new System.Drawing.Size(50, 17);
@@ -305,6 +316,7 @@ namespace Student_Performance.Gui
             // 
             // testBox
             // 
+            this.testBox.Enabled = false;
             this.testBox.Location = new System.Drawing.Point(406, 4);
             this.testBox.Name = "testBox";
             this.testBox.Size = new System.Drawing.Size(118, 20);
@@ -313,6 +325,7 @@ namespace Student_Performance.Gui
             // 
             // lunchBox
             // 
+            this.lunchBox.Enabled = false;
             this.lunchBox.Location = new System.Drawing.Point(270, 4);
             this.lunchBox.Name = "lunchBox";
             this.lunchBox.Size = new System.Drawing.Size(118, 20);
@@ -321,6 +334,7 @@ namespace Student_Performance.Gui
             // 
             // parentBox
             // 
+            this.parentBox.Enabled = false;
             this.parentBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.parentBox.FormattingEnabled = true;
             this.parentBox.Items.AddRange(new object[] {
@@ -338,7 +352,11 @@ namespace Student_Performance.Gui
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.rep5BT);
+            this.tabPage2.Controls.Add(this.rep4BT);
+            this.tabPage2.Controls.Add(this.rep3BT);
+            this.tabPage2.Controls.Add(this.rep2BT);
+            this.tabPage2.Controls.Add(this.rep1BT);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -347,15 +365,60 @@ namespace Student_Performance.Gui
             this.tabPage2.Text = "Graficar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // rep5BT
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(153, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(474, 25);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Aqui se incluirá la funcion para reportes graficos";
+            this.rep5BT.Enabled = false;
+            this.rep5BT.Location = new System.Drawing.Point(610, 18);
+            this.rep5BT.Name = "rep5BT";
+            this.rep5BT.Size = new System.Drawing.Size(75, 23);
+            this.rep5BT.TabIndex = 4;
+            this.rep5BT.Text = "Reporte 5";
+            this.rep5BT.UseVisualStyleBackColor = true;
+            this.rep5BT.Click += new System.EventHandler(this.rep5BT_Click);
+            // 
+            // rep4BT
+            // 
+            this.rep4BT.Enabled = false;
+            this.rep4BT.Location = new System.Drawing.Point(476, 18);
+            this.rep4BT.Name = "rep4BT";
+            this.rep4BT.Size = new System.Drawing.Size(75, 23);
+            this.rep4BT.TabIndex = 3;
+            this.rep4BT.Text = "Reporte 4";
+            this.rep4BT.UseVisualStyleBackColor = true;
+            this.rep4BT.Click += new System.EventHandler(this.rep4BT_Click);
+            // 
+            // rep3BT
+            // 
+            this.rep3BT.Enabled = false;
+            this.rep3BT.Location = new System.Drawing.Point(333, 18);
+            this.rep3BT.Name = "rep3BT";
+            this.rep3BT.Size = new System.Drawing.Size(75, 23);
+            this.rep3BT.TabIndex = 2;
+            this.rep3BT.Text = "Reporte 3";
+            this.rep3BT.UseVisualStyleBackColor = true;
+            this.rep3BT.Click += new System.EventHandler(this.rep3BT_Click);
+            // 
+            // rep2BT
+            // 
+            this.rep2BT.Enabled = false;
+            this.rep2BT.Location = new System.Drawing.Point(195, 18);
+            this.rep2BT.Name = "rep2BT";
+            this.rep2BT.Size = new System.Drawing.Size(75, 23);
+            this.rep2BT.TabIndex = 1;
+            this.rep2BT.Text = "Reporte 2";
+            this.rep2BT.UseVisualStyleBackColor = true;
+            this.rep2BT.Click += new System.EventHandler(this.rep2BT_Click);
+            // 
+            // rep1BT
+            // 
+            this.rep1BT.Enabled = false;
+            this.rep1BT.Location = new System.Drawing.Point(55, 18);
+            this.rep1BT.Name = "rep1BT";
+            this.rep1BT.Size = new System.Drawing.Size(75, 23);
+            this.rep1BT.TabIndex = 0;
+            this.rep1BT.Text = "Reporte 1";
+            this.rep1BT.UseVisualStyleBackColor = true;
+            this.rep1BT.Click += new System.EventHandler(this.rep1BT_Click);
             // 
             // PrincipalWindow
             // 
@@ -375,7 +438,6 @@ namespace Student_Performance.Gui
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -393,7 +455,6 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox parentBox;
         private System.Windows.Forms.Label testLB;
         private System.Windows.Forms.Label lunchLB;
@@ -408,5 +469,10 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox maxBox;
         private System.Windows.Forms.TextBox minBox;
+        private System.Windows.Forms.Button rep5BT;
+        private System.Windows.Forms.Button rep4BT;
+        private System.Windows.Forms.Button rep3BT;
+        private System.Windows.Forms.Button rep2BT;
+        private System.Windows.Forms.Button rep1BT;
     }
 }
