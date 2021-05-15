@@ -57,6 +57,7 @@ namespace Student_Performance.Gui
             this.OK3.TabIndex = 49;
             this.OK3.Text = "OK";
             this.OK3.UseVisualStyleBackColor = true;
+            this.OK3.Click += new System.EventHandler(this.OK3_Click);
             // 
             // label2
             // 
@@ -93,6 +94,7 @@ namespace Student_Performance.Gui
             this.writingCheck.TabIndex = 45;
             this.writingCheck.Text = "Writing";
             this.writingCheck.UseVisualStyleBackColor = true;
+            this.writingCheck.CheckedChanged += new System.EventHandler(this.writingCheck_CheckedChanged);
             // 
             // readingCheck
             // 
@@ -104,6 +106,7 @@ namespace Student_Performance.Gui
             this.readingCheck.TabIndex = 44;
             this.readingCheck.Text = "Reading";
             this.readingCheck.UseVisualStyleBackColor = true;
+            this.readingCheck.CheckedChanged += new System.EventHandler(this.readingCheck_CheckedChanged);
             // 
             // mathCheck
             // 
@@ -115,6 +118,7 @@ namespace Student_Performance.Gui
             this.mathCheck.TabIndex = 43;
             this.mathCheck.Text = "Math";
             this.mathCheck.UseVisualStyleBackColor = true;
+            this.mathCheck.CheckedChanged += new System.EventHandler(this.mathCheck_CheckedChanged);
             // 
             // OK2
             // 
@@ -125,6 +129,7 @@ namespace Student_Performance.Gui
             this.OK2.TabIndex = 42;
             this.OK2.Text = "OK";
             this.OK2.UseVisualStyleBackColor = true;
+            this.OK2.Click += new System.EventHandler(this.OK2_Click);
             // 
             // OK1
             // 
@@ -135,6 +140,7 @@ namespace Student_Performance.Gui
             this.OK1.TabIndex = 41;
             this.OK1.Text = "OK";
             this.OK1.UseVisualStyleBackColor = true;
+            this.OK1.Click += new System.EventHandler(this.OK1_Click);
             // 
             // testLB
             // 
@@ -163,6 +169,7 @@ namespace Student_Performance.Gui
             this.testBox.Name = "testBox";
             this.testBox.Size = new System.Drawing.Size(118, 20);
             this.testBox.TabIndex = 38;
+            this.testBox.TextChanged += new System.EventHandler(this.testBox_TextChanged);
             // 
             // lunchBox
             // 
@@ -171,6 +178,7 @@ namespace Student_Performance.Gui
             this.lunchBox.Name = "lunchBox";
             this.lunchBox.Size = new System.Drawing.Size(118, 20);
             this.lunchBox.TabIndex = 37;
+            this.lunchBox.TextChanged += new System.EventHandler(this.lunchBox_TextChanged);
             // 
             // parentBox
             // 
@@ -188,6 +196,7 @@ namespace Student_Performance.Gui
             this.parentBox.Size = new System.Drawing.Size(128, 21);
             this.parentBox.TabIndex = 36;
             this.parentBox.Text = "Paren Level";
+            this.parentBox.SelectedIndexChanged += new System.EventHandler(this.parentBox_SelectedIndexChanged);
             // 
             // etniBox
             // 
@@ -206,6 +215,7 @@ namespace Student_Performance.Gui
             this.etniBox.Sorted = true;
             this.etniBox.TabIndex = 34;
             this.etniBox.Text = "Race/ Ethnicity";
+            this.etniBox.SelectedIndexChanged += new System.EventHandler(this.etniBox_SelectedIndexChanged);
             // 
             // femaleButton
             // 
@@ -219,6 +229,7 @@ namespace Student_Performance.Gui
             this.femaleButton.TabStop = true;
             this.femaleButton.Text = "Female";
             this.femaleButton.UseVisualStyleBackColor = true;
+            this.femaleButton.CheckedChanged += new System.EventHandler(this.femaleButton_CheckedChanged);
             // 
             // maleButton
             // 
@@ -232,8 +243,9 @@ namespace Student_Performance.Gui
             this.maleButton.TabStop = true;
             this.maleButton.Text = "Male";
             this.maleButton.UseVisualStyleBackColor = true;
+            this.maleButton.CheckedChanged += new System.EventHandler(this.maleButton_CheckedChanged);
             // 
-            // UserControl1
+            // FilterWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -254,7 +266,7 @@ namespace Student_Performance.Gui
             this.Controls.Add(this.etniBox);
             this.Controls.Add(this.femaleButton);
             this.Controls.Add(this.maleButton);
-            this.Name = "UserControl1";
+            this.Name = "FilterWindow";
             this.Size = new System.Drawing.Size(756, 60);
             this.ResumeLayout(false);
             this.PerformLayout();

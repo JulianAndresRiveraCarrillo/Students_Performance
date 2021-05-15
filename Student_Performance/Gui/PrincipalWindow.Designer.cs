@@ -40,8 +40,8 @@ namespace Student_Performance.Gui
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.userControl11 = new Student_Performance.Gui.FilterWindow();
-            this.userControl21 = new Student_Performance.Gui.GraphicWindow();
+            this.filterControl = new Student_Performance.Gui.FilterWindow();
+            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -121,7 +121,7 @@ namespace Student_Performance.Gui
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.userControl21);
+            this.tabPage2.Controls.Add(this.graphicControl);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -132,7 +132,7 @@ namespace Student_Performance.Gui
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.userControl11);
+            this.tabPage1.Controls.Add(this.filterControl);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -151,19 +151,19 @@ namespace Student_Performance.Gui
             this.tabControl1.Size = new System.Drawing.Size(764, 86);
             this.tabControl1.TabIndex = 5;
             // 
-            // userControl11
+            // filterControl
             // 
-            this.userControl11.Location = new System.Drawing.Point(0, 0);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(756, 60);
-            this.userControl11.TabIndex = 0;
+            this.filterControl.Location = new System.Drawing.Point(0, 0);
+            this.filterControl.Name = "filterControl";
+            this.filterControl.Size = new System.Drawing.Size(756, 60);
+            this.filterControl.TabIndex = 0;
             // 
-            // userControl21
+            // graphicControl
             // 
-            this.userControl21.Location = new System.Drawing.Point(0, 0);
-            this.userControl21.Name = "userControl21";
-            this.userControl21.Size = new System.Drawing.Size(756, 60);
-            this.userControl21.TabIndex = 0;
+            this.graphicControl.Location = new System.Drawing.Point(0, 0);
+            this.graphicControl.Name = "graphicControl";
+            this.graphicControl.Size = new System.Drawing.Size(756, 60);
+            this.graphicControl.TabIndex = 0;
             // 
             // PrincipalWindow
             // 
@@ -198,7 +198,7 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
-        private GraphicWindow userControl21;
-        private FilterWindow userControl11;
+        private GraphicWindow graphicControl;
+        private FilterWindow filterControl;
     }
 }

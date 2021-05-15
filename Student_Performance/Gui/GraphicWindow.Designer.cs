@@ -45,6 +45,7 @@ namespace Student_Performance.Gui
             this.rep5BT.TabIndex = 14;
             this.rep5BT.Text = "Reporte 5";
             this.rep5BT.UseVisualStyleBackColor = true;
+            this.rep5BT.Click += new System.EventHandler(this.rep5BT_Click);
             // 
             // rep4BT
             // 
@@ -55,6 +56,7 @@ namespace Student_Performance.Gui
             this.rep4BT.TabIndex = 13;
             this.rep4BT.Text = "Reporte 4";
             this.rep4BT.UseVisualStyleBackColor = true;
+            this.rep4BT.Click += new System.EventHandler(this.rep4BT_Click);
             // 
             // rep3BT
             // 
@@ -65,6 +67,7 @@ namespace Student_Performance.Gui
             this.rep3BT.TabIndex = 12;
             this.rep3BT.Text = "Reporte 3";
             this.rep3BT.UseVisualStyleBackColor = true;
+            this.rep3BT.Click += new System.EventHandler(this.rep3BT_Click);
             // 
             // rep2BT
             // 
@@ -75,6 +78,7 @@ namespace Student_Performance.Gui
             this.rep2BT.TabIndex = 11;
             this.rep2BT.Text = "Reporte 2";
             this.rep2BT.UseVisualStyleBackColor = true;
+            this.rep2BT.Click += new System.EventHandler(this.rep2BT_Click);
             // 
             // rep1BT
             // 
@@ -85,8 +89,9 @@ namespace Student_Performance.Gui
             this.rep1BT.TabIndex = 10;
             this.rep1BT.Text = "Reporte 1";
             this.rep1BT.UseVisualStyleBackColor = true;
+            this.rep1BT.Click += new System.EventHandler(this.rep1BT_Click);
             // 
-            // UserControl2
+            // GraphicWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -95,7 +100,7 @@ namespace Student_Performance.Gui
             this.Controls.Add(this.rep3BT);
             this.Controls.Add(this.rep2BT);
             this.Controls.Add(this.rep1BT);
-            this.Name = "UserControl2";
+            this.Name = "GraphicWindow";
             this.Size = new System.Drawing.Size(756, 60);
             this.ResumeLayout(false);
 
