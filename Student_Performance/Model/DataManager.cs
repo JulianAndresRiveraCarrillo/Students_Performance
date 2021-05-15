@@ -7,6 +7,7 @@ namespace Student_Performance.Model
     class DataManager
     {
         private DataTable table = new DataTable();
+        private DataTable table_aux = new DataTable();
 
         public DataTable Table
         {
@@ -48,6 +49,7 @@ namespace Student_Performance.Model
                     table.Rows.Add(row);
                 }
             }
+            table_aux = table.Copy();
         }
         public void filterBySex(string path, string filter)
         {

@@ -9,3 +9,5 @@ J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Stud
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.exe
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.pdb
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csprojAssemblyReference.cache
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.Gui.FilterWindow.resources
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.Gui.GraphicWindow.resources

@@ -8,14 +8,19 @@ namespace Student_Performance.Gui
     public partial class PrincipalWindow : Form
     {
         private DataManager  manager = new DataManager();
-        private string file;
+        public static string file;
+
+        public String File
+        {
+            get => file;
+        }
 
         public PrincipalWindow()
         {
             InitializeComponent();
             
         }
-
+        
         private void loadBT_Click(object sender, EventArgs e)
         {
             loadData.ShowDialog();
@@ -27,7 +32,7 @@ namespace Student_Performance.Gui
             {
                 dataView.DataSource = manager.Table;
             }
-            maleButton.Enabled = true;
+           /* maleButton.Enabled = true;
             femaleButton.Enabled = true;
             etniBox.Enabled = true;
             parentBox.Enabled = true;
@@ -42,11 +47,14 @@ namespace Student_Performance.Gui
             rep3BT.Enabled = true;
             rep4BT.Enabled = true;
             rep5BT.Enabled = true;
+
+            loadBT.Enabled = false;
+            refreshBT.Enabled = true;*/
         }
 
         private void maleButton_CheckedChanged(object sender, EventArgs e)
         {
-            manager.filterBySex(file, "male");
+            
         }
 
         private void femaleButton_CheckedChanged(object sender, EventArgs e)
@@ -54,26 +62,26 @@ namespace Student_Performance.Gui
             manager.filterBySex(file, "female");
         }
 
-        private void etniBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByRace(file, etniBox.Text);
+        private void etniBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByRace(file, ""); /*etniBox.Text);*/
 
-        private void parentBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByPLevel(file, parentBox.Text);
+        private void parentBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByPLevel(file, "");/*parentBox.Text);*/
 
         private void lunchBox_TextChanged(object sender, EventArgs e)
-        {
+        {/*
             lunchBox.AutoCompleteCustomSource = loadLunchData();
             lunchBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             lunchBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
-
-            OK1.Enabled = true;
+            
+            OK1.Enabled = true;*/
         }
 
         private void testBox_TextChanged(object sender, EventArgs e)
-        {
+        {/*
             testBox.AutoCompleteCustomSource = loadTestData();
             testBox.AutoCompleteMode = AutoCompleteMode.Suggest;
             testBox.AutoCompleteSource = AutoCompleteSource.CustomSource;
 
-            OK2.Enabled = true;
+            OK2.Enabled = true;*/
         }
 
         private AutoCompleteStringCollection loadLunchData()
@@ -98,17 +106,17 @@ namespace Student_Performance.Gui
 
         private void OK1_Click(object sender, EventArgs e)
         {
-            manager.filterByLunch(file, lunchBox.Text);
+          //  manager.filterByLunch(file, lunchBox.Text);
         }
 
         private void OK2_Click(object sender, EventArgs e)
         {
-            manager.filterByTest(file, testBox.Text);
+            //manager.filterByTest(file, testBox.Text);
         }
 
         private void mathCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (mathCheck.Checked == true)
+            /*if (mathCheck.Checked == true)
             {
                 OK3.Enabled = true;
                 minBox.Enabled = true;
@@ -116,11 +124,11 @@ namespace Student_Performance.Gui
 
                 readingCheck.Checked = false;
                 writingCheck.Checked = false;
-            }
+            }*/
         }
 
         private void readingChech_CheckedChanged(object sender, EventArgs e)
-        {
+        {/*
             if (readingCheck.Checked == true)
             {
                 OK3.Enabled = true;
@@ -129,12 +137,12 @@ namespace Student_Performance.Gui
 
                 mathCheck.Checked = false;
                 writingCheck.Checked = false;
-            }
+            }*/
         }
 
         private void writingCheck_CheckedChanged(object sender, EventArgs e)
         {
-            if (writingCheck.Checked == true)
+           /* if (writingCheck.Checked == true)
             {
                 OK3.Enabled = true;
                 minBox.Enabled = true;
@@ -142,11 +150,11 @@ namespace Student_Performance.Gui
 
                 mathCheck.Checked = false;
                 readingCheck.Checked = false;
-            }
+            }*/
         }
 
         private void OK3_Click(object sender, EventArgs e)
-        {
+        {/*
             if (mathCheck.Checked == true)
             {
                 manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 5);
@@ -158,7 +166,7 @@ namespace Student_Performance.Gui
             else
             {
                 manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 7);
-            }
+            }*/
         }
 
         private void rep1BT_Click(object sender, EventArgs e)
@@ -189,6 +197,11 @@ namespace Student_Performance.Gui
         {
             Report rep = new Report(file, 4, 5);
             rep.Show();
+        }
+
+        private void refreshBT_Click(object sender, EventArgs e)
+        {
+           // manager.refreshTable();
         }
     }
 }
