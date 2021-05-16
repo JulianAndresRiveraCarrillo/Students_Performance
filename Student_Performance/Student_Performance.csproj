@@ -60,12 +60,6 @@
     <Compile Include="Gui\Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\FilterWindow.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Gui\FilterWindow.Designer.cs">
-      <DependentUpon>FilterWindow.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\GraphicWindow.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -81,9 +75,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\FilterWindow.resx">
-      <DependentUpon>FilterWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\GraphicWindow.resx">
       <DependentUpon>GraphicWindow.cs</DependentUpon>
