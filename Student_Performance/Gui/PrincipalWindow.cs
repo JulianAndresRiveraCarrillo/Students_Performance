@@ -35,39 +35,80 @@ namespace Student_Performance.Gui
             }
             graphicControl.setFile(file);
 
-            maleButton.Enabled = true;
-            femaleButton.Enabled = true;
-            etniBox.Enabled = true;
-            parentBox.Enabled = true;
-            lunchBox.Enabled = true;
-            testBox.Enabled = true;
-            mathCheck.Enabled = true;
-            readingCheck.Enabled = true;
-            writingCheck.Enabled = true;
+            buttonEnabled(true);
 
             loadBT.Enabled = false;
             refreshBT.Enabled = true;
         }
 
+        private void buttonEnabled(bool v)
+        {
+            maleButton.Enabled = v;
+            femaleButton.Enabled = v;
+            etniBox.Enabled = v;
+            parentBox.Enabled = v;
+            lunchBox.Enabled = v;
+            testBox.Enabled = v;
+            mathCheck.Enabled = v;
+            readingCheck.Enabled = v;
+            writingCheck.Enabled = v;
+        }
+
         private void refreshBT_Click(object sender, EventArgs e)
         {
-            dataView.DataSource = manager.Table_Aux;
-            manager.Table = manager.Table_Aux;
+            manager.Table.Clear();
+            manager.Table = manager.Table_Aux.Copy();
+            dataView.DataSource = manager.Table;
+
+            maleButton.Checked = false;
+            femaleButton.Checked = false;
+            mathCheck.Checked = false;
+            writingCheck.Checked = false;
+            readingCheck.Checked = false;
+            minBox.Clear();
+            maxBox.Clear();
+            etniBox.Text = "Race/ Ethnicity";
+            parentBox.Text = "Parent Level";
+            lunchBox.Clear();
+            testBox.Clear();
         }
 
         private void maleButton_CheckedChanged(object sender, EventArgs e)
         {
-            manager.filterBySex(file, "male");
+            if (maleButton.Checked == true)
+            {
+                manager.filterBySex(file, "male");
+            }
         }
 
         private void femaleButton_CheckedChanged(object sender, EventArgs e)
         {
-            manager.filterBySex(file, "female");
+            if(femaleButton.Checked == true)
+            {
+                manager.filterBySex(file, "female");
+            }
         }
 
-        private void etniBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByRace(file, etniBox.Text);
+        private void etniBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (etniBox.Text.Equals("Race / Ethnicity")){ 
+                //Limpiar Filtro
+            }else {
+                manager.filterByRace(file, etniBox.Text);
+            }
+        }
 
-        private void parentBox_SelectedIndexChanged(object sender, EventArgs e) => manager.filterByPLevel(file, parentBox.Text);
+        private void parentBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (parentBox.Text.Equals("Parent Level"))
+            {
+                //Limpiar Filtro
+            }
+            else
+            {
+                manager.filterByPLevel(file, parentBox.Text);
+            }
+        }
 
         private void lunchBox_TextChanged(object sender, EventArgs e)
         {
@@ -158,20 +199,26 @@ namespace Student_Performance.Gui
 
         private void OK3_Click(object sender, EventArgs e)
         {
-            if (mathCheck.Checked == true)
+            try
             {
-                manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 5);
+                if (mathCheck.Checked == true)
+                {
+                    manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 5);
+                }
+                else if (readingCheck.Checked == true)
+                {
+                    manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 6);
+                }
+                else
+                {
+                    manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 7);
+                }
             }
-            else if (readingCheck.Checked == true)
+            catch(FormatException fe)
             {
-                manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 6);
-            }
-            else
-            {
-                manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 7);
+                MessageBox.Show(fe.Message + "\n" + "\n" + "*Solo valores numericos*");
             }
         }
-
-        
+  
     }
 }

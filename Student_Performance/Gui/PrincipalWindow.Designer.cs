@@ -364,7 +364,7 @@ namespace Student_Performance.Gui
             this.parentBox.Name = "parentBox";
             this.parentBox.Size = new System.Drawing.Size(128, 21);
             this.parentBox.TabIndex = 53;
-            this.parentBox.Text = "Paren Level";
+            this.parentBox.Text = "Parent Level";
             this.parentBox.SelectedIndexChanged += new System.EventHandler(this.parentBox_SelectedIndexChanged);
             // 
             // etniBox
@@ -441,7 +441,7 @@ namespace Student_Performance.Gui
             this.Controls.Add(this.tableLayoutPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrincipalWindow";
-            this.Text = "PrincipalWindow ::PW";
+            this.Text = "StudentPerformance ::SP";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
