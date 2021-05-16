@@ -34,11 +34,14 @@ namespace Student_Performance.Gui
             this.loadData = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.refreshBT = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataView = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.OK3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,9 +61,12 @@ namespace Student_Performance.Gui
             this.femaleButton = new System.Windows.Forms.RadioButton();
             this.maleButton = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -69,11 +75,11 @@ namespace Student_Performance.Gui
             // 
             // loadBT
             // 
-            this.loadBT.Location = new System.Drawing.Point(32, 21);
+            this.loadBT.Image = ((System.Drawing.Image)(resources.GetObject("loadBT.Image")));
+            this.loadBT.Location = new System.Drawing.Point(3, 4);
             this.loadBT.Name = "loadBT";
-            this.loadBT.Size = new System.Drawing.Size(88, 24);
+            this.loadBT.Size = new System.Drawing.Size(58, 59);
             this.loadBT.TabIndex = 1;
-            this.loadBT.Text = "Load DataSet";
             this.loadBT.UseVisualStyleBackColor = true;
             this.loadBT.Click += new System.EventHandler(this.loadBT_Click);
             // 
@@ -90,7 +96,9 @@ namespace Student_Performance.Gui
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panel2, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel4, 3, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 413);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -107,10 +115,28 @@ namespace Student_Performance.Gui
             this.panel1.Size = new System.Drawing.Size(146, 65);
             this.panel1.TabIndex = 0;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(146, 65);
+            this.panel3.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("News701 BT", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(26, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 19);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Cargar Datos:";
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.refreshBT);
-            this.panel2.Location = new System.Drawing.Point(459, 3);
+            this.panel2.Location = new System.Drawing.Point(611, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(146, 65);
             this.panel2.TabIndex = 2;
@@ -120,12 +146,30 @@ namespace Student_Performance.Gui
             this.refreshBT.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.refreshBT.Enabled = false;
             this.refreshBT.Image = ((System.Drawing.Image)(resources.GetObject("refreshBT.Image")));
-            this.refreshBT.Location = new System.Drawing.Point(49, 3);
+            this.refreshBT.Location = new System.Drawing.Point(3, 2);
             this.refreshBT.Name = "refreshBT";
             this.refreshBT.Size = new System.Drawing.Size(60, 62);
             this.refreshBT.TabIndex = 1;
             this.refreshBT.UseVisualStyleBackColor = true;
             this.refreshBT.Click += new System.EventHandler(this.refreshBT_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(459, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(146, 65);
+            this.panel4.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("News701 BT", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(11, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Limpiar Filtros:";
             // 
             // dataView
             // 
@@ -145,13 +189,6 @@ namespace Student_Performance.Gui
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Graficar";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // graphicControl
-            // 
-            this.graphicControl.Location = new System.Drawing.Point(0, 0);
-            this.graphicControl.Name = "graphicControl";
-            this.graphicControl.Size = new System.Drawing.Size(756, 60);
-            this.graphicControl.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -387,6 +424,13 @@ namespace Student_Performance.Gui
             this.tabControl1.Size = new System.Drawing.Size(764, 86);
             this.tabControl1.TabIndex = 5;
             // 
+            // graphicControl
+            // 
+            this.graphicControl.Location = new System.Drawing.Point(0, 0);
+            this.graphicControl.Name = "graphicControl";
+            this.graphicControl.Size = new System.Drawing.Size(756, 60);
+            this.graphicControl.TabIndex = 0;
+            // 
             // PrincipalWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -400,7 +444,11 @@ namespace Student_Performance.Gui
             this.Text = "PrincipalWindow ::PW";
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -439,5 +487,9 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.ComboBox etniBox;
         private System.Windows.Forms.RadioButton femaleButton;
         private System.Windows.Forms.RadioButton maleButton;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label1;
     }
 }

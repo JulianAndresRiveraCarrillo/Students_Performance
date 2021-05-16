@@ -9,9 +9,15 @@ namespace Student_Performance.Model
         private DataTable table = new DataTable();
         private DataTable table_aux = new DataTable();
 
+        public DataTable Table_Aux
+        {
+            get => table_aux;
+        }
+
         public DataTable Table
         {
             get => table;
+            set => table = value;
         }
 
         public void createTable(string file)

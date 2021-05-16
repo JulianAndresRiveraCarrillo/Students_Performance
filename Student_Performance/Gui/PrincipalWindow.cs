@@ -51,7 +51,8 @@ namespace Student_Performance.Gui
 
         private void refreshBT_Click(object sender, EventArgs e)
         {
-           // manager.refreshTable();
+            dataView.DataSource = manager.Table_Aux;
+            manager.Table = manager.Table_Aux;
         }
 
         private void maleButton_CheckedChanged(object sender, EventArgs e)
@@ -170,5 +171,7 @@ namespace Student_Performance.Gui
                 manager.filterByScore(file, long.Parse(minBox.Text), long.Parse(maxBox.Text), 7);
             }
         }
+
+        
     }
 }
