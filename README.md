@@ -36,7 +36,7 @@ The Ministry of Education at this time is already in the second stage of the pro
 
 
 ## Important documents
-- [ **Funtional requirements** ](https://docs.google.com/document/d/1kjheYaw0f0OE7OHN7IJmPgISDKB7Irt8vXzq28fp9zE/edit?usp=sharing)
+- [ **Funtional requirements** ](https://docs.google.com/document/d/1kjheYaw0f0OE7OHN7IJmPgISDKB7Irt8vXzq28fp9zE/edit)
 - [ **No Funtional requirements** ](https://docs.google.com/document/d/1KfjjfUOnYAS4wksXGwnv0OQebtJM4IWTe7q7Xt3L9OY/edit?usp=sharing)
 - [ **Class Diagram** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/Student_Performance%20Class%20Diagram.pdf)
 - [ **Object Diagram** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/Object%20Diagram.pdf)
