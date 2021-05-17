@@ -66,10 +66,10 @@
     <Compile Include="Gui\GraphicWindow.Designer.cs">
       <DependentUpon>GraphicWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Class1.cs" />
+    <Compile Include="Model\Dtree.cs" />
     <Compile Include="Model\DataManager.cs" />
     <Compile Include="Model\GraphManager.cs" />
-    <Compile Include="Model\dTree.cs" />
+    <Compile Include="Model\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gui\PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>

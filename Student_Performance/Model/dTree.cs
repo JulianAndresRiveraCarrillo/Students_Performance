@@ -6,31 +6,72 @@ using System.Threading.Tasks;
 
 namespace Student_Performance.Model
 {
-    class Student
+    class Dtree
     {
-        private string v1;
-        private int v2;
 
+        private float nodeGainRatio;
+        private float nodeInformationGain;
+        private Boolean isLeaf;
+        private int majorityClass;
+        private int bestAttribute;
+        private Dtree[] children;
+        private Dtree parent;
+
+        public Dtree()
+        {
+            parent = null;
+        }
         
-
-        public Student(string vi, int vii)
+        public string[] segregate(string[] arrayAtributes, string value)
         {
-            v1 = vi;
-            v2 = vii;
+            string[] output = new string[arrayAtributes.Length];
+
+            for(int i = 0; i < arrayAtributes.Length; i++)
+            {
+                if(arrayAtributes[i] == value)
+                {
+                    output[i] = arrayAtributes[i];
+                }
+            }
+
+            return output;
         }
 
-        public string V1
+        public double computeEntropy(string[] labels)
         {
-            get => v1;
-            set => v1 = value;
+            double entropy = 0;
+
+            for(int i = 0; i < labels.Length; i++)
+            {
+                double problability = segregate(labels, labels[i]).Length / labels.Length;
+                entropy -= problability * Math.Log(problability, 2);
+            }
+
+            return entropy;
         }
 
-        public int V2
+        public int frequenlyValue(string [] labels)
         {
-            get => v2;
-            set => v2 = value;
+            int bestCount = -1;
+            int bestID = 0;
+
+            for(int i = 0; i < labels.Length; i++)
+            {
+                int count = segregate(labels, labels[i]).Length;
+                
+                if(count > bestCount)
+                {
+                    bestCount = count;
+                    bestID = i;
+                }
+            }
+
+            return bestID;
         }
 
-       
+
+
+
+
     }
 }
