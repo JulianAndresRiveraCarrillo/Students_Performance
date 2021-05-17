@@ -21,6 +21,15 @@ namespace Student_Performance.Model
         {
             parent = null;
         }
+
+        public void buildTree(string[] arrayAtributes, string[] labels, Dtree self)
+        {
+            //numInstances
+            //nodeInfo
+            majorityClass = frequenlyValue(labels);
+
+            
+        }
         
         public string[] segregate(string[] arrayAtributes, string value)
         {
