@@ -9,13 +9,13 @@ namespace Student_Performance.Model
     class Dtree
     {
 
-        private float nodeGainRatio;
-        private float nodeInformationGain;
-        private Boolean isLeaf;
-        private int majorityClass;
-        private int bestAttribute;
-        private Dtree[] children;
-        private Dtree parent;
+            private float nodeGainRatio;
+            private float nodeInformationGain;
+            private Boolean isLeaf;
+            private int majorityClass;
+            private int bestAttribute;
+            private Dtree[] children;
+            private Dtree parent;
 
         public Dtree()
         {

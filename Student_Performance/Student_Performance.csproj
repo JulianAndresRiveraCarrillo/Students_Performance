@@ -89,7 +89,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DOCS\Student_Performance Class Diagram %281%29.pdf" />
+    <None Include="DOCS\Student_Performance Class Diagram %282%29.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
