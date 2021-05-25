@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
+using Accord.Math;
+using Accord.Statistics.Filters;
 using Student_Performance.Model;
 
 namespace Student_Performance.Gui
@@ -228,6 +230,21 @@ namespace Student_Performance.Gui
         }
 
         private void btn_arbol_libreria_Click(object sender, EventArgs e)
+        {
+
+            DataTable dataset = manager.
+            var codebook = new Codification(dataset);
+
+            // Translate our training data into integer symbols using our codebook:
+            DataTable symbols = codebook.Apply(dataset);
+            int[][] inputs = symbols.ToArray<int>("Outlook", "Temperature", "Humidity", "Wind");
+            int[] outputs = symbols.ToArray<int>("PlayTennis");
+
+
+        }
+
+
+        private void crear_arbol_libreria()
         {
 
         }

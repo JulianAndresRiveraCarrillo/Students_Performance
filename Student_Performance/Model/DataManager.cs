@@ -57,6 +57,13 @@ namespace Student_Performance.Model
             }
             table_aux = table.Copy();
         }
+
+        public DataTable GetDataTable()
+        {
+            return this.table;
+        }
+
+
         public void filterBySex(string path, string filter)
         {
             table.Clear();
