@@ -219,6 +219,17 @@ namespace Student_Performance.Gui
                 MessageBox.Show(fe.Message + "\n" + "\n" + "*Solo valores numericos*");
             }
         }
-  
+
+
+
+        private void btn_arbol_propio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_arbol_libreria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
