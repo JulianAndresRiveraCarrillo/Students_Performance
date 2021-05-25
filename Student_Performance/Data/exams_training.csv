@@ -1,0 +1,699 @@
+gender;race/ethnicity;parental level of education;lunch;test preparation course;math score;reading score;writing score;output
+female;group C;some college;standard;completed;74;87;93;YES
+male;group E;some college;standard;none;99;92;88;YES
+female;group C;high school;standard;none;80;87;80;YES
+male;group E;high school;free/reduced;none;59;49;43;NO
+female;group B;high school;standard;completed;42;50;56;NO
+male;group A;associate's degree;standard;none;40;41;39;NO
+female;group B;high school;standard;none;85;90;89;YES
+female;group E;bachelor's degree;free/reduced;none;50;53;51;NO
+male;group C;high school;free/reduced;none;85;71;66;YES
+female;group E;some high school;standard;none;78;88;84;YES
+female;group D;some college;free/reduced;none;38;48;52;NO
+female;group E;high school;standard;none;79;73;75;YES
+female;group B;associate's degree;free/reduced;none;43;62;56;NO
+male;group D;bachelor's degree;standard;completed;82;84;84;YES
+male;group D;some high school;standard;completed;54;52;52;NO
+female;group E;high school;standard;completed;79;78;83;YES
+female;group D;some high school;standard;completed;60;77;81;YES
+male;group C;bachelor's degree;standard;completed;42;37;41;NO
+male;group D;associate's degree;standard;completed;72;67;73;YES
+male;group B;some college;standard;completed;73;76;74;YES
+female;group B;associate's degree;standard;completed;60;67;71;NO
+male;group D;associate's degree;free/reduced;completed;51;56;60;NO
+male;group C;some college;standard;none;64;59;57;NO
+male;group D;some college;standard;completed;86;90;92;YES
+male;group C;associate's degree;standard;completed;92;83;85;YES
+female;group B;high school;free/reduced;completed;62;72;67;YES
+male;group E;some college;standard;none;100;91;87;YES
+female;group D;bachelor's degree;free/reduced;none;73;85;84;YES
+male;group A;associate's degree;standard;none;79;87;83;YES
+male;group C;associate's degree;free/reduced;none;43;39;33;NO
+female;group D;some college;standard;none;79;89;90;YES
+male;group D;associate's degree;standard;none;59;52;49;NO
+female;group C;high school;free/reduced;none;50;53;53;NO
+female;group C;some college;standard;none;56;56;63;NO
+female;group E;bachelor's degree;standard;none;39;39;41;NO
+male;group D;some college;free/reduced;completed;55;64;66;NO
+male;group B;some college;standard;none;65;53;63;NO
+male;group A;associate's degree;standard;none;54;52;49;NO
+female;group C;some college;standard;none;56;64;62;NO
+female;group C;master's degree;standard;none;68;82;73;YES
+female;group E;some college;free/reduced;none;63;70;70;YES
+female;group D;bachelor's degree;free/reduced;none;41;51;51;NO
+male;group E;high school;standard;completed;75;59;59;NO
+male;group C;high school;standard;none;53;54;48;NO
+male;group D;some college;free/reduced;none;34;30;35;NO
+male;group A;high school;standard;completed;60;54;54;NO
+female;group D;some high school;standard;none;59;71;70;YES
+male;group B;associate's degree;standard;none;78;76;78;YES
+male;group D;bachelor's degree;standard;none;64;52;48;NO
+female;group D;associate's degree;free/reduced;completed;51;55;59;NO
+female;group C;high school;free/reduced;none;57;66;66;NO
+male;group A;some high school;standard;none;46;49;45;NO
+female;group B;associate's degree;standard;completed;75;82;82;YES
+male;group B;high school;standard;none;92;83;74;YES
+male;group E;high school;standard;completed;83;72;70;YES
+male;group B;master's degree;standard;none;76;61;66;YES
+male;group C;some high school;standard;none;50;46;41;NO
+male;group B;high school;standard;completed;53;49;50;NO
+female;group E;some college;standard;none;69;75;73;YES
+male;group D;associate's degree;standard;none;82;75;74;YES
+female;group E;high school;standard;none;79;84;78;YES
+female;group B;some college;standard;none;78;86;87;YES
+female;group E;some high school;free/reduced;none;52;63;58;NO
+male;group D;master's degree;free/reduced;none;86;92;84;YES
+female;group E;bachelor's degree;free/reduced;completed;67;87;85;YES
+male;group B;high school;free/reduced;completed;76;81;77;YES
+male;group C;associate's degree;standard;none;83;97;87;YES
+male;group E;high school;free/reduced;completed;52;46;49;NO
+female;group B;associate's degree;standard;completed;66;67;75;YES
+male;group B;some college;free/reduced;none;28;27;26;NO
+female;group D;associate's degree;free/reduced;completed;83;97;100;YES
+male;group B;associate's degree;standard;none;56;63;61;NO
+female;group C;high school;standard;none;76;78;71;YES
+female;group D;some high school;free/reduced;none;43;52;56;NO
+female;group E;master's degree;standard;completed;81;79;84;YES
+male;group B;master's degree;free/reduced;none;77;71;69;YES
+male;group C;associate's degree;standard;completed;70;65;67;YES
+female;group C;bachelor's degree;standard;none;77;84;85;YES
+female;group B;high school;standard;none;82;78;78;YES
+female;group C;some high school;standard;completed;71;76;69;YES
+male;group D;some high school;free/reduced;none;61;56;54;NO
+female;group D;master's degree;standard;none;86;81;90;YES
+male;group D;associate's degree;standard;none;55;53;48;NO
+male;group B;high school;standard;none;50;48;46;NO
+female;group A;some high school;free/reduced;none;65;74;75;YES
+female;group C;high school;standard;none;58;61;59;NO
+male;group C;high school;standard;none;77;65;61;YES
+female;group C;master's degree;standard;none;52;46;50;NO
+male;group D;high school;standard;completed;78;72;75;YES
+male;group C;high school;free/reduced;none;79;76;68;YES
+male;group C;bachelor's degree;free/reduced;completed;44;61;54;NO
+female;group D;high school;free/reduced;completed;67;72;73;YES
+female;group D;associate's degree;standard;completed;61;70;78;YES
+male;group C;bachelor's degree;standard;none;81;66;72;YES
+female;group A;some high school;free/reduced;completed;74;88;86;YES
+male;group D;bachelor's degree;standard;completed;72;75;76;YES
+female;group B;some high school;standard;none;55;73;65;NO
+male;group E;bachelor's degree;standard;none;87;81;71;YES
+female;group D;associate's degree;standard;completed;79;87;93;YES
+male;group D;bachelor's degree;standard;none;75;84;80;YES
+male;group E;some high school;standard;completed;95;89;88;YES
+male;group B;associate's degree;free/reduced;none;65;81;72;YES
+male;group B;high school;free/reduced;completed;58;64;60;NO
+female;group B;some college;free/reduced;completed;67;86;85;YES
+female;group D;some college;standard;completed;79;95;93;YES
+female;group C;associate's degree;standard;none;77;85;79;YES
+male;group B;some high school;free/reduced;none;62;51;47;NO
+male;group C;some high school;standard;none;55;53;47;NO
+male;group D;associate's degree;free/reduced;none;83;79;77;YES
+female;group A;high school;standard;completed;58;68;72;NO
+female;group B;some college;standard;none;62;71;63;NO
+female;group C;some college;standard;none;81;89;94;YES
+male;group C;some high school;free/reduced;completed;35;46;44;NO
+male;group D;high school;standard;completed;64;62;64;NO
+male;group C;high school;free/reduced;none;45;51;43;NO
+male;group B;associate's degree;free/reduced;none;56;64;57;NO
+female;group E;associate's degree;standard;completed;100;100;100;YES
+female;group D;high school;standard;completed;55;62;66;NO
+female;group A;some college;free/reduced;completed;76;87;89;YES
+female;group C;high school;standard;none;64;75;75;YES
+male;group B;some college;free/reduced;none;47;34;35;NO
+male;group E;bachelor's degree;standard;completed;83;70;75;YES
+female;group D;some college;standard;completed;56;55;61;NO
+female;group C;high school;standard;completed;56;77;68;YES
+female;group B;some college;standard;none;76;88;86;YES
+female;group C;some college;standard;completed;55;69;71;NO
+male;group B;master's degree;standard;none;85;79;72;YES
+male;group C;associate's degree;standard;completed;92;90;92;YES
+female;group D;some high school;free/reduced;completed;65;70;68;YES
+female;group D;master's degree;standard;none;82;75;82;YES
+male;group D;high school;standard;completed;82;78;77;YES
+female;group C;some college;standard;completed;67;74;77;YES
+female;group D;some college;standard;completed;89;100;100;YES
+male;group D;some college;free/reduced;none;40;48;40;NO
+male;group B;some college;free/reduced;completed;49;56;58;NO
+male;group E;some college;standard;completed;99;97;95;YES
+female;group D;some high school;standard;none;62;75;77;YES
+male;group B;bachelor's degree;free/reduced;none;81;70;70;YES
+male;group C;some high school;standard;none;75;73;69;YES
+female;group A;associate's degree;standard;none;79;82;80;YES
+male;group C;some high school;free/reduced;none;44;52;47;NO
+female;group B;associate's degree;standard;completed;79;84;93;YES
+female;group B;some college;free/reduced;none;54;71;69;NO
+male;group B;associate's degree;standard;none;64;61;59;NO
+male;group D;associate's degree;standard;none;66;70;70;YES
+female;group C;associate's degree;free/reduced;none;29;46;42;NO
+male;group E;some college;standard;completed;82;74;76;YES
+male;group B;associate's degree;standard;none;64;74;60;NO
+male;group B;associate's degree;standard;completed;83;80;79;YES
+male;group E;associate's degree;standard;none;66;58;55;NO
+male;group C;some college;standard;completed;81;85;87;YES
+female;group C;associate's degree;free/reduced;completed;58;74;76;YES
+male;group C;high school;standard;none;64;72;58;NO
+female;group C;bachelor's degree;free/reduced;completed;77;93;91;YES
+male;group B;high school;standard;completed;48;54;57;NO
+female;group D;associate's degree;standard;none;76;70;75;YES
+male;group C;high school;standard;completed;72;70;60;YES
+male;group B;some high school;standard;completed;73;75;72;YES
+male;group C;some high school;free/reduced;none;25;21;17;NO
+female;group D;high school;standard;none;71;76;80;YES
+male;group B;some high school;standard;none;67;57;58;NO
+female;group D;associate's degree;standard;completed;83;97;95;YES
+female;group C;some college;standard;none;76;90;88;YES
+male;group C;some high school;free/reduced;none;48;57;45;NO
+male;group D;bachelor's degree;free/reduced;completed;54;48;51;NO
+female;group C;some college;standard;none;55;67;59;NO
+male;group C;some college;standard;none;56;57;49;NO
+male;group E;bachelor's degree;standard;none;80;69;65;YES
+female;group D;associate's degree;free/reduced;completed;82;89;97;YES
+male;group C;some college;standard;none;75;73;67;YES
+female;group C;high school;free/reduced;completed;73;84;78;YES
+male;group B;high school;standard;none;79;75;71;YES
+female;group D;master's degree;standard;none;69;73;75;YES
+male;group D;some college;standard;none;75;63;61;NO
+male;group D;some high school;free/reduced;none;54;54;52;NO
+female;group C;associate's degree;free/reduced;none;41;56;53;NO
+male;group B;associate's degree;standard;none;74;78;80;YES
+female;group B;associate's degree;free/reduced;completed;69;89;87;YES
+male;group D;some high school;standard;none;70;63;58;NO
+female;group A;some college;free/reduced;completed;50;65;57;NO
+female;group D;bachelor's degree;standard;none;62;75;73;YES
+female;group C;high school;standard;none;61;71;72;YES
+female;group E;some high school;free/reduced;completed;88;96;99;YES
+female;group E;associate's degree;free/reduced;completed;86;90;92;YES
+male;group B;associate's degree;free/reduced;none;51;50;43;NO
+female;group B;some high school;standard;none;48;52;53;NO
+female;group D;associate's degree;free/reduced;completed;67;78;84;YES
+female;group C;bachelor's degree;standard;none;62;71;70;YES
+male;group E;some high school;standard;completed;100;89;83;YES
+female;group A;high school;standard;completed;87;97;96;YES
+female;group C;associate's degree;free/reduced;completed;34;71;64;NO
+female;group D;bachelor's degree;standard;none;48;57;60;NO
+female;group C;high school;standard;none;53;77;70;YES
+female;group B;master's degree;standard;completed;74;89;85;YES
+male;group E;bachelor's degree;standard;none;89;76;73;YES
+male;group E;associate's degree;standard;completed;85;71;67;YES
+female;group D;some college;free/reduced;completed;71;89;88;YES
+female;group B;high school;standard;none;39;48;41;NO
+female;group A;associate's degree;standard;none;72;79;79;YES
+male;group A;associate's degree;free/reduced;none;66;61;57;NO
+female;group A;associate's degree;free/reduced;none;48;69;71;NO
+male;group C;master's degree;standard;none;63;58;52;NO
+female;group C;some high school;standard;none;66;75;69;YES
+female;group C;some high school;free/reduced;none;46;48;47;NO
+female;group C;some college;standard;none;52;53;53;NO
+male;group C;some college;free/reduced;completed;42;58;52;NO
+female;group D;some college;standard;completed;91;100;100;YES
+female;group C;associate's degree;free/reduced;none;78;84;83;YES
+female;group C;bachelor's degree;standard;none;55;65;59;NO
+female;group B;some college;standard;none;72;79;80;YES
+female;group E;some college;free/reduced;none;41;60;51;NO
+female;group D;high school;standard;completed;55;57;57;NO
+female;group D;some high school;standard;none;50;57;59;NO
+female;group C;some college;standard;completed;69;72;74;YES
+female;group B;bachelor's degree;standard;none;76;86;84;YES
+male;group C;some college;standard;none;79;73;69;YES
+female;group C;some high school;free/reduced;none;42;43;41;NO
+male;group B;some high school;free/reduced;completed;65;65;66;NO
+female;group E;some high school;free/reduced;none;55;57;58;NO
+male;group B;bachelor's degree;free/reduced;none;63;60;50;NO
+female;group C;associate's degree;free/reduced;completed;57;80;81;YES
+female;group C;some high school;standard;none;60;64;69;NO
+female;group C;some college;standard;completed;64;78;74;YES
+male;group B;associate's degree;standard;none;76;70;62;YES
+female;group D;some college;standard;none;83;91;83;YES
+male;group B;high school;free/reduced;completed;64;60;60;NO
+female;group E;some high school;standard;none;83;90;89;YES
+male;group D;high school;standard;completed;89;85;85;YES
+male;group B;some college;standard;none;84;75;72;YES
+female;group B;some high school;free/reduced;none;36;54;51;NO
+male;group C;some high school;standard;none;73;81;76;YES
+female;group C;some high school;standard;none;61;74;66;YES
+female;group C;bachelor's degree;standard;none;75;87;88;YES
+male;group E;high school;standard;completed;75;76;66;YES
+female;group A;some high school;standard;none;76;87;82;YES
+female;group B;some high school;standard;completed;78;88;91;YES
+female;group C;master's degree;free/reduced;completed;70;89;86;YES
+female;group B;master's degree;free/reduced;none;50;54;55;NO
+male;group C;high school;free/reduced;completed;51;48;42;NO
+female;group B;some college;free/reduced;none;62;72;70;YES
+female;group D;some college;free/reduced;none;82;84;80;YES
+female;group E;some college;standard;none;82;87;84;YES
+male;group D;high school;standard;none;69;56;56;NO
+female;group E;some high school;standard;none;73;72;78;YES
+male;group B;some college;standard;completed;61;68;68;NO
+male;group C;some college;standard;none;83;81;81;YES
+female;group B;master's degree;standard;completed;96;100;100;YES
+female;group D;associate's degree;free/reduced;none;51;58;57;NO
+male;group D;associate's degree;free/reduced;none;68;63;56;NO
+male;group E;some college;free/reduced;completed;59;61;61;NO
+male;group C;some college;free/reduced;none;34;44;40;NO
+female;group C;high school;free/reduced;none;53;71;69;NO
+female;group D;master's degree;standard;completed;73;75;86;YES
+male;group D;high school;free/reduced;none;64;60;59;NO
+female;group A;some high school;free/reduced;none;49;61;57;NO
+male;group C;high school;standard;none;57;61;54;NO
+female;group C;associate's degree;standard;none;62;63;72;NO
+male;group C;master's degree;free/reduced;none;53;61;54;NO
+female;group D;some college;standard;none;75;80;84;YES
+male;group D;bachelor's degree;standard;completed;71;75;70;YES
+male;group E;some college;standard;completed;80;69;69;YES
+female;group E;high school;standard;none;82;81;77;YES
+female;group A;bachelor's degree;standard;none;70;81;76;YES
+female;group E;associate's degree;standard;none;72;69;65;YES
+male;group C;high school;standard;none;59;65;60;NO
+female;group D;associate's degree;free/reduced;none;60;74;79;YES
+male;group E;bachelor's degree;free/reduced;completed;96;99;98;YES
+male;group B;some college;standard;completed;82;81;78;YES
+female;group E;some college;standard;none;74;78;74;YES
+female;group C;associate's degree;standard;none;83;82;78;YES
+male;group D;some college;free/reduced;completed;66;68;69;YES
+male;group B;some high school;standard;none;52;48;49;NO
+male;group D;some high school;standard;completed;74;70;70;YES
+male;group B;bachelor's degree;free/reduced;none;62;60;52;NO
+male;group B;master's degree;standard;none;92;83;81;YES
+male;group D;high school;standard;none;54;67;55;NO
+male;group B;some high school;free/reduced;completed;72;87;77;YES
+male;group D;bachelor's degree;standard;none;66;62;60;NO
+male;group E;some high school;standard;none;90;76;70;YES
+female;group E;some college;free/reduced;completed;82;85;93;YES
+female;group B;some high school;free/reduced;none;45;67;58;NO
+male;group C;bachelor's degree;free/reduced;none;83;84;77;YES
+male;group D;some college;free/reduced;none;53;55;54;NO
+female;group E;some high school;standard;none;71;78;73;YES
+male;group B;bachelor's degree;standard;completed;66;68;65;NO
+female;group D;associate's degree;standard;none;75;78;83;YES
+male;group D;some high school;standard;completed;92;90;87;YES
+female;group E;high school;standard;completed;67;69;70;YES
+female;group C;associate's degree;standard;completed;79;85;87;YES
+female;group C;high school;standard;completed;63;66;71;YES
+female;group E;high school;standard;completed;84;92;97;YES
+male;group E;high school;standard;completed;77;74;70;YES
+male;group C;high school;standard;none;62;64;58;NO
+male;group D;bachelor's degree;standard;none;80;69;68;YES
+female;group C;bachelor's degree;standard;none;60;71;69;YES
+male;group D;some college;standard;none;87;72;75;YES
+male;group C;associate's degree;standard;none;80;79;72;YES
+male;group C;some college;standard;completed;95;95;93;YES
+female;group E;associate's degree;standard;completed;74;81;88;YES
+male;group D;some college;free/reduced;none;65;52;53;NO
+male;group B;some high school;standard;none;80;67;65;YES
+male;group B;master's degree;standard;none;69;55;53;NO
+female;group B;high school;standard;none;83;86;82;YES
+female;group B;associate's degree;free/reduced;completed;62;72;78;YES
+male;group D;high school;free/reduced;completed;55;64;59;NO
+male;group D;high school;standard;completed;80;68;79;YES
+male;group E;some high school;standard;completed;75;71;65;YES
+female;group D;some college;standard;none;65;84;83;YES
+male;group C;associate's degree;standard;completed;87;87;85;YES
+female;group E;bachelor's degree;standard;completed;93;100;100;YES
+female;group B;some college;free/reduced;completed;68;80;81;YES
+female;group E;some college;free/reduced;none;62;65;67;NO
+male;group C;some high school;standard;completed;91;81;84;YES
+male;group B;associate's degree;free/reduced;completed;58;57;56;NO
+female;group C;associate's degree;standard;none;93;100;98;YES
+male;group D;some college;standard;completed;79;66;65;YES
+female;group C;master's degree;standard;none;48;58;57;NO
+female;group E;high school;free/reduced;none;62;64;65;NO
+female;group A;associate's degree;standard;none;67;74;71;YES
+female;group C;some college;free/reduced;none;41;54;53;NO
+male;group B;some college;standard;none;77;78;72;YES
+male;group B;associate's degree;standard;none;90;87;86;YES
+female;group C;some high school;standard;none;62;68;69;NO
+female;group B;high school;standard;none;51;59;57;NO
+male;group C;master's degree;free/reduced;none;51;48;47;NO
+female;group C;some college;free/reduced;completed;80;88;87;YES
+male;group E;associate's degree;free/reduced;completed;79;76;82;YES
+female;group D;associate's degree;free/reduced;completed;40;48;52;NO
+female;group D;high school;standard;none;78;77;80;YES
+female;group D;some high school;standard;none;69;83;85;YES
+female;group D;high school;standard;none;73;85;82;YES
+male;group B;some high school;standard;completed;55;58;61;NO
+male;group A;some college;standard;none;77;68;68;YES
+male;group C;some high school;free/reduced;none;47;46;41;NO
+male;group C;associate's degree;free/reduced;none;58;52;54;NO
+male;group C;high school;standard;none;90;73;70;YES
+female;group D;master's degree;standard;none;56;67;70;NO
+female;group C;bachelor's degree;standard;none;61;68;69;NO
+male;group C;associate's degree;standard;none;69;58;58;NO
+female;group A;high school;free/reduced;none;64;70;64;NO
+male;group B;master's degree;free/reduced;completed;77;80;81;YES
+female;group C;bachelor's degree;standard;none;87;82;89;YES
+male;group B;some high school;standard;completed;74;64;68;YES
+male;group B;high school;standard;completed;70;68;69;YES
+male;group C;high school;standard;none;79;75;75;YES
+male;group D;high school;standard;completed;90;75;84;YES
+male;group D;some college;standard;none;81;69;72;YES
+male;group D;high school;standard;completed;47;42;40;NO
+female;group D;high school;free/reduced;none;46;57;59;NO
+female;group B;high school;standard;completed;60;64;71;NO
+male;group D;master's degree;standard;none;90;81;86;YES
+male;group C;associate's degree;standard;none;68;52;56;NO
+female;group B;associate's degree;standard;none;78;96;92;YES
+female;group B;associate's degree;standard;none;74;91;86;YES
+female;group B;associate's degree;standard;none;61;75;73;YES
+female;group C;some high school;standard;none;45;53;51;NO
+female;group C;associate's degree;standard;completed;74;81;84;YES
+female;group A;associate's degree;standard;completed;89;97;100;YES
+female;group D;some high school;free/reduced;completed;58;77;77;YES
+male;group C;bachelor's degree;standard;completed;89;88;81;YES
+male;group C;high school;standard;none;69;80;76;YES
+female;group B;high school;free/reduced;none;31;47;42;NO
+male;group C;some high school;free/reduced;none;53;57;43;NO
+male;group C;some high school;standard;none;67;69;65;YES
+male;group E;some high school;standard;none;62;54;48;NO
+male;group C;bachelor's degree;standard;none;69;71;72;YES
+female;group B;high school;standard;none;56;61;63;NO
+male;group E;some high school;standard;completed;84;75;72;YES
+male;group B;associate's degree;free/reduced;none;48;42;41;NO
+female;group D;some high school;free/reduced;none;54;66;71;NO
+male;group B;some college;free/reduced;completed;48;49;50;NO
+female;group B;some college;standard;none;85;96;91;YES
+female;group D;high school;standard;none;66;65;71;YES
+male;group C;some high school;standard;none;51;51;44;NO
+female;group B;some college;standard;completed;69;69;75;YES
+male;group D;high school;free/reduced;none;50;42;41;NO
+female;group C;high school;standard;none;55;60;65;NO
+male;group B;associate's degree;free/reduced;completed;68;67;70;YES
+female;group B;associate's degree;standard;completed;74;80;80;YES
+male;group E;some college;free/reduced;none;48;43;45;NO
+male;group D;associate's degree;standard;none;73;63;66;YES
+female;group A;associate's degree;free/reduced;none;36;44;51;NO
+female;group B;some college;standard;none;87;83;88;YES
+female;group B;some college;free/reduced;none;76;81;80;YES
+male;group E;some college;standard;none;82;71;68;YES
+female;group B;high school;standard;none;57;68;57;NO
+female;group C;bachelor's degree;free/reduced;completed;43;65;64;NO
+female;group C;some college;standard;none;49;57;58;NO
+female;group C;high school;standard;none;52;59;55;NO
+female;group D;bachelor's degree;standard;none;70;73;76;YES
+male;group C;master's degree;standard;none;55;46;40;NO
+female;group C;high school;free/reduced;none;38;42;44;NO
+female;group C;some high school;free/reduced;none;50;74;68;NO
+male;group B;some college;standard;none;52;53;52;NO
+male;group C;some college;free/reduced;none;55;65;54;NO
+female;group C;some college;standard;completed;77;89;88;YES
+female;group C;high school;standard;completed;72;77;75;YES
+male;group B;associate's degree;free/reduced;completed;65;67;61;NO
+female;group A;associate's degree;free/reduced;completed;52;70;66;NO
+male;group D;master's degree;standard;none;89;89;86;YES
+male;group E;high school;standard;none;65;48;46;NO
+female;group A;some college;free/reduced;none;55;59;58;NO
+male;group D;some college;free/reduced;none;58;66;67;NO
+male;group E;high school;standard;none;84;83;77;YES
+female;group B;associate's degree;standard;none;65;70;68;YES
+female;group C;bachelor's degree;standard;none;51;46;50;NO
+male;group D;some high school;standard;none;32;31;26;NO
+male;group A;master's degree;standard;none;70;66;65;YES
+male;group C;some high school;free/reduced;completed;54;54;54;NO
+male;group E;some high school;standard;none;85;72;72;YES
+male;group C;high school;standard;none;52;53;49;NO
+male;group D;associate's degree;standard;none;77;65;63;YES
+female;group C;high school;standard;none;44;43;49;NO
+female;group B;high school;free/reduced;none;49;56;57;NO
+female;group D;associate's degree;standard;completed;88;94;97;YES
+male;group D;some college;free/reduced;none;46;48;46;NO
+female;group D;some college;free/reduced;none;59;65;73;NO
+female;group D;some high school;free/reduced;completed;46;74;74;NO
+female;group C;associate's degree;standard;none;61;70;68;NO
+male;group D;high school;free/reduced;none;77;74;74;YES
+male;group B;some college;standard;none;86;88;82;YES
+female;group D;associate's degree;standard;completed;61;66;74;YES
+female;group D;master's degree;standard;completed;98;98;100;YES
+male;group B;bachelor's degree;standard;completed;76;75;76;YES
+female;group E;high school;standard;completed;91;96;95;YES
+female;group B;bachelor's degree;standard;none;82;87;87;YES
+female;group B;some college;standard;completed;93;100;100;YES
+male;group D;some college;standard;completed;70;62;69;YES
+male;group A;some high school;free/reduced;none;57;59;60;NO
+female;group D;some high school;standard;completed;67;86;84;YES
+male;group C;associate's degree;free/reduced;none;47;43;42;NO
+female;group B;high school;standard;none;78;89;84;YES
+male;group E;associate's degree;standard;none;65;59;51;NO
+male;group C;some high school;standard;completed;74;77;69;YES
+male;group D;associate's degree;standard;none;86;85;81;YES
+male;group D;bachelor's degree;free/reduced;completed;84;92;84;YES
+female;group D;some high school;free/reduced;none;54;61;61;NO
+female;group B;bachelor's degree;standard;completed;87;100;100;YES
+female;group D;some college;standard;none;64;80;76;YES
+female;group E;master's degree;free/reduced;none;71;80;78;YES
+female;group A;some high school;standard;none;49;54;56;NO
+male;group D;bachelor's degree;standard;completed;86;82;81;YES
+male;group B;some high school;standard;none;80;79;78;YES
+female;group B;bachelor's degree;standard;none;72;77;75;YES
+male;group E;high school;free/reduced;none;68;59;59;NO
+female;group C;associate's degree;standard;completed;62;70;78;YES
+male;group D;bachelor's degree;free/reduced;completed;94;92;91;YES
+male;group D;associate's degree;standard;completed;71;60;63;NO
+male;group C;some college;standard;none;87;77;78;YES
+male;group B;some college;free/reduced;none;46;34;34;NO
+male;group D;high school;standard;none;46;48;46;NO
+female;group B;some high school;standard;none;55;62;65;NO
+female;group B;some high school;free/reduced;none;58;72;70;YES
+female;group B;master's degree;free/reduced;none;75;84;85;YES
+female;group E;some high school;standard;completed;77;83;86;YES
+male;group C;high school;standard;none;52;52;54;NO
+female;group B;some college;standard;none;67;75;68;YES
+female;group D;master's degree;free/reduced;none;82;80;81;YES
+female;group B;some high school;free/reduced;completed;51;69;70;NO
+male;group C;some high school;standard;none;85;91;80;YES
+female;group E;high school;standard;none;93;84;88;YES
+female;group C;some college;standard;completed;70;78;85;YES
+male;group E;bachelor's degree;free/reduced;none;64;51;53;NO
+female;group E;associate's degree;free/reduced;none;66;75;72;YES
+female;group D;some college;free/reduced;none;42;42;49;NO
+female;group A;associate's degree;free/reduced;none;39;54;54;NO
+male;group A;high school;free/reduced;completed;71;82;73;YES
+female;group A;some high school;standard;none;66;68;72;YES
+female;group B;associate's degree;standard;none;85;90;93;YES
+female;group B;some high school;standard;completed;59;72;72;YES
+female;group D;master's degree;standard;none;78;77;87;YES
+female;group E;high school;free/reduced;none;79;88;79;YES
+female;group D;associate's degree;free/reduced;none;63;77;76;YES
+male;group D;some high school;standard;completed;78;73;66;YES
+male;group B;associate's degree;free/reduced;none;49;53;49;NO
+female;group B;some high school;standard;none;64;74;70;YES
+female;group A;some college;standard;completed;92;95;95;YES
+female;group E;master's degree;standard;completed;93;100;100;YES
+female;group D;associate's degree;standard;none;57;62;58;NO
+male;group B;associate's degree;standard;completed;76;65;67;YES
+male;group E;associate's degree;standard;completed;77;60;69;YES
+female;group B;some college;free/reduced;none;43;47;53;NO
+male;group E;some high school;standard;none;95;88;85;YES
+female;group B;associate's degree;free/reduced;none;47;51;44;NO
+female;group A;some high school;free/reduced;none;43;64;62;NO
+female;group C;high school;standard;completed;64;63;70;NO
+female;group D;some college;standard;none;53;70;68;NO
+male;group D;associate's degree;standard;none;56;47;47;NO
+male;group C;high school;standard;none;54;60;49;NO
+male;group C;associate's degree;standard;completed;90;96;89;YES
+female;group E;some college;standard;none;55;52;54;NO
+female;group C;some high school;standard;none;81;80;82;YES
+male;group C;high school;standard;completed;60;66;64;NO
+female;group C;some college;standard;none;63;81;81;YES
+female;group E;some high school;free/reduced;completed;66;78;74;YES
+female;group B;some college;standard;none;47;58;59;NO
+male;group C;some college;free/reduced;none;59;60;60;NO
+female;group C;some college;standard;completed;62;75;72;YES
+female;group D;high school;free/reduced;completed;32;43;46;NO
+female;group E;associate's degree;standard;none;95;92;90;YES
+male;group A;some college;standard;completed;76;73;74;YES
+male;group C;master's degree;standard;none;100;90;91;YES
+male;group C;some high school;standard;none;69;53;52;NO
+male;group B;some college;standard;none;53;58;56;NO
+female;group C;some high school;free/reduced;none;45;68;58;NO
+female;group C;bachelor's degree;standard;none;80;81;77;YES
+female;group E;some college;standard;none;76;70;71;YES
+female;group D;associate's degree;free/reduced;completed;67;84;89;YES
+female;group A;high school;standard;completed;79;88;89;YES
+female;group A;high school;standard;completed;53;64;72;NO
+female;group E;associate's degree;standard;completed;98;100;100;YES
+female;group B;some high school;free/reduced;none;37;50;48;NO
+male;group C;some college;free/reduced;none;44;55;49;NO
+male;group D;associate's degree;standard;none;74;70;57;YES
+male;group D;high school;standard;none;61;54;49;NO
+male;group B;some college;standard;none;75;69;69;YES
+female;group C;high school;standard;completed;59;78;80;YES
+male;group C;associate's degree;free/reduced;none;65;69;62;NO
+female;group C;some high school;standard;completed;59;64;62;NO
+male;group B;associate's degree;standard;none;78;70;72;YES
+male;group C;some college;standard;none;77;71;64;YES
+male;group B;bachelor's degree;standard;completed;65;71;61;NO
+male;group B;some college;free/reduced;completed;62;58;61;NO
+female;group C;high school;standard;none;43;51;54;NO
+female;group E;associate's degree;free/reduced;none;65;77;75;YES
+male;group D;some college;standard;none;79;78;74;YES
+male;group D;some high school;free/reduced;none;57;62;56;NO
+male;group C;associate's degree;standard;none;76;67;60;YES
+male;group D;some high school;free/reduced;completed;59;48;49;NO
+female;group C;some college;free/reduced;none;48;70;63;NO
+female;group A;associate's degree;standard;completed;51;61;68;NO
+female;group C;some college;standard;completed;50;76;73;NO
+male;group E;associate's degree;standard;none;89;83;77;YES
+male;group C;some high school;free/reduced;none;37;43;39;NO
+female;group B;associate's degree;standard;none;81;87;90;YES
+male;group E;some college;standard;none;96;81;76;YES
+male;group C;bachelor's degree;free/reduced;none;59;74;64;NO
+female;group D;some college;standard;completed;75;82;86;YES
+male;group D;some college;standard;none;53;45;46;NO
+female;group C;high school;standard;none;72;77;70;YES
+male;group E;high school;standard;none;63;54;52;NO
+male;group A;associate's degree;standard;none;64;65;65;NO
+female;group E;associate's degree;free/reduced;none;82;91;84;YES
+female;group D;high school;standard;none;66;78;81;YES
+female;group B;high school;standard;none;79;79;71;YES
+female;group B;high school;standard;none;70;71;70;YES
+male;group E;associate's degree;free/reduced;none;85;84;74;YES
+female;group C;some college;free/reduced;none;53;61;63;NO
+female;group C;bachelor's degree;standard;completed;75;94;89;YES
+female;group D;associate's degree;free/reduced;none;81;85;88;YES
+female;group E;some college;free/reduced;none;59;55;55;NO
+female;group C;some college;standard;none;60;73;68;YES
+male;group B;some high school;standard;none;56;53;51;NO
+male;group B;some college;free/reduced;none;66;69;65;YES
+female;group E;some college;standard;none;67;79;71;YES
+male;group B;bachelor's degree;standard;completed;79;65;69;YES
+male;group C;associate's degree;free/reduced;none;29;30;25;NO
+female;group E;associate's degree;standard;none;87;94;91;YES
+male;group B;bachelor's degree;standard;completed;71;63;75;YES
+female;group C;some high school;standard;completed;84;96;100;YES
+female;group C;some college;standard;completed;60;71;71;YES
+male;group D;high school;standard;completed;58;58;54;NO
+female;group D;some high school;standard;none;51;56;61;NO
+male;group C;some high school;standard;none;66;63;53;NO
+male;group C;associate's degree;standard;none;81;83;76;YES
+female;group C;high school;standard;none;62;74;71;YES
+female;group C;some high school;standard;completed;86;100;97;YES
+female;group B;some college;free/reduced;none;76;76;78;YES
+female;group B;some college;standard;none;92;95;88;YES
+female;group C;high school;standard;none;71;74;68;YES
+male;group A;associate's degree;free/reduced;completed;61;74;71;YES
+female;group D;some college;free/reduced;none;45;56;56;NO
+female;group A;master's degree;standard;none;76;74;77;YES
+female;group D;high school;free/reduced;none;69;77;83;YES
+male;group E;high school;standard;none;69;61;54;NO
+female;group D;master's degree;standard;completed;83;96;100;YES
+female;group C;bachelor's degree;standard;completed;78;82;85;YES
+male;group B;high school;standard;completed;75;70;69;YES
+male;group C;high school;standard;completed;85;91;87;YES
+female;group C;high school;standard;none;43;58;54;NO
+female;group C;some high school;free/reduced;completed;61;66;66;NO
+male;group A;some college;standard;none;61;72;64;NO
+male;group C;some high school;standard;completed;90;88;84;YES
+female;group D;high school;standard;none;24;37;34;NO
+female;group C;high school;standard;completed;62;78;75;YES
+female;group C;high school;standard;none;65;72;69;YES
+female;group C;some college;standard;none;58;71;64;NO
+male;group D;master's degree;standard;completed;100;100;98;YES
+female;group C;some high school;standard;completed;79;86;90;YES
+male;group D;bachelor's degree;standard;none;80;75;78;YES
+male;group D;bachelor's degree;free/reduced;completed;67;67;74;YES
+female;group E;high school;standard;none;65;65;59;NO
+male;group C;associate's degree;standard;none;58;51;56;NO
+male;group E;some high school;free/reduced;none;47;47;37;NO
+female;group D;some high school;standard;none;66;79;77;YES
+female;group C;associate's degree;standard;completed;84;95;96;YES
+male;group D;some college;standard;completed;80;76;81;YES
+male;group B;some high school;standard;none;70;62;55;NO
+female;group D;some college;standard;none;63;73;68;YES
+male;group C;associate's degree;standard;completed;69;77;73;YES
+female;group C;associate's degree;standard;none;75;74;69;YES
+male;group E;high school;free/reduced;completed;71;59;58;NO
+male;group C;some college;standard;none;72;68;64;YES
+female;group D;some college;free/reduced;none;60;74;69;YES
+male;group B;some college;standard;none;66;52;54;NO
+female;group A;bachelor's degree;standard;none;74;83;83;YES
+male;group D;some high school;standard;completed;92;78;84;YES
+female;group B;some high school;standard;none;65;62;61;NO
+female;group D;some high school;standard;none;57;53;53;NO
+female;group C;some college;standard;none;42;66;63;NO
+female;group C;associate's degree;standard;none;66;76;75;YES
+female;group D;high school;standard;none;69;81;83;YES
+male;group C;associate's degree;standard;none;76;68;63;YES
+male;group A;some college;standard;completed;62;57;64;NO
+female;group C;bachelor's degree;standard;none;90;100;100;YES
+female;group D;bachelor's degree;standard;completed;79;89;97;YES
+female;group A;bachelor's degree;standard;completed;63;67;76;YES
+male;group A;associate's degree;free/reduced;none;52;52;54;NO
+female;group A;associate's degree;standard;completed;68;81;83;YES
+female;group A;associate's degree;free/reduced;completed;42;67;63;NO
+male;group D;some high school;standard;none;69;65;62;NO
+male;group C;some college;free/reduced;none;63;58;63;NO
+female;group C;some college;free/reduced;none;41;55;56;NO
+male;group D;some college;standard;completed;68;64;66;NO
+male;group C;associate's degree;free/reduced;none;66;69;64;NO
+female;group A;associate's degree;free/reduced;none;57;80;75;YES
+female;group E;associate's degree;standard;none;68;75;79;YES
+male;group C;some high school;free/reduced;none;53;62;52;NO
+male;group D;some college;standard;completed;83;78;84;YES
+female;group D;some college;standard;none;53;66;67;NO
+male;group D;master's degree;standard;none;62;66;57;NO
+female;group C;some high school;standard;none;69;76;72;YES
+female;group B;associate's degree;standard;none;53;61;59;NO
+male;group B;associate's degree;standard;none;80;60;67;YES
+female;group B;some high school;standard;completed;87;97;95;YES
+male;group D;some college;standard;none;79;78;76;YES
+male;group C;high school;standard;completed;67;70;65;YES
+female;group D;some college;free/reduced;none;63;64;70;NO
+male;group B;some college;standard;none;48;51;49;NO
+female;group C;bachelor's degree;standard;none;62;69;70;YES
+female;group E;some high school;standard;none;52;66;58;NO
+male;group C;high school;standard;none;43;31;30;NO
+male;group B;high school;standard;none;76;72;68;YES
+male;group C;some college;standard;completed;82;87;84;YES
+female;group E;some college;free/reduced;none;77;97;87;YES
+male;group E;bachelor's degree;free/reduced;completed;91;78;84;YES
+female;group E;associate's degree;free/reduced;none;73;76;74;YES
+female;group C;bachelor's degree;standard;none;67;69;67;YES
+female;group B;high school;free/reduced;completed;61;81;82;YES
+male;group C;some high school;standard;completed;78;87;83;YES
+female;group C;bachelor's degree;standard;completed;56;71;69;NO
+female;group B;bachelor's degree;standard;completed;71;85;83;YES
+female;group C;high school;standard;completed;70;77;83;YES
+female;group D;some high school;standard;completed;49;63;64;NO
+female;group B;some high school;standard;completed;81;96;98;YES
+female;group B;some college;standard;none;75;65;70;YES
+female;group E;some college;free/reduced;completed;73;86;86;YES
+male;group C;some college;standard;completed;64;61;61;NO
+female;group B;associate's degree;free/reduced;none;45;61;59;NO
+female;group B;some high school;free/reduced;none;55;67;58;NO
+male;group C;high school;standard;none;50;42;41;NO
+female;group B;bachelor's degree;free/reduced;completed;59;77;79;YES
+female;group A;some high school;standard;none;75;80;80;YES
+male;group B;associate's degree;standard;completed;50;46;43;NO
+female;group C;high school;standard;none;51;57;61;NO
+female;group C;some high school;free/reduced;none;50;57;50;NO
+male;group D;high school;free/reduced;completed;61;53;54;NO
+male;group E;some high school;standard;none;79;66;70;YES
+female;group A;some high school;standard;none;63;75;77;YES
+female;group C;some high school;standard;completed;62;64;70;NO
+female;group A;some high school;standard;none;48;47;49;NO
+male;group D;master's degree;free/reduced;none;59;66;62;NO
+female;group D;associate's degree;free/reduced;none;63;80;76;YES
+female;group D;some high school;standard;none;76;73;79;YES
+female;group D;master's degree;standard;completed;82;87;90;YES
+female;group B;high school;standard;none;55;65;69;NO
+male;group C;high school;standard;completed;76;83;72;YES
+male;group D;master's degree;standard;none;62;54;53;NO
+female;group C;master's degree;free/reduced;none;55;73;67;NO
+male;group C;some high school;free/reduced;completed;53;59;50;NO
+female;group D;some high school;standard;none;67;76;72;YES
+male;group C;some college;standard;none;78;70;66;YES
+male;group B;some college;standard;none;63;64;61;NO
+male;group B;high school;free/reduced;none;67;62;64;NO
+male;group C;some high school;standard;none;81;74;68;YES
+male;group C;associate's degree;free/reduced;none;69;61;60;NO
+female;group A;master's degree;standard;none;83;83;81;YES
+male;group C;bachelor's degree;standard;completed;88;91;92;YES
+male;group C;high school;standard;completed;73;71;71;YES
+male;group C;some high school;standard;completed;52;53;49;NO
+male;group C;bachelor's degree;standard;none;64;63;62;NO
+female;group C;associate's degree;standard;completed;60;76;81;YES
+female;group C;associate's degree;free/reduced;completed;60;80;82;YES
+male;group D;high school;standard;none;65;60;67;NO
+male;group A;associate's degree;free/reduced;none;50;56;46;NO
+male;group C;high school;standard;none;91;88;83;YES
+male;group D;high school;standard;none;60;67;58;NO
+female;group C;some college;standard;none;45;59;61;NO
