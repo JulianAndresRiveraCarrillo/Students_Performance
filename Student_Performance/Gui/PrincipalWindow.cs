@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+using Accord.MachineLearning.DecisionTrees;
+using Accord.MachineLearning.DecisionTrees.Learning;
 using Accord.Math;
+using Accord.Math.Optimization.Losses;
 using Accord.Statistics.Filters;
 using Student_Performance.Model;
 
@@ -231,22 +235,120 @@ namespace Student_Performance.Gui
 
         private void btn_arbol_libreria_Click(object sender, EventArgs e)
         {
+            loadData.ShowDialog();
+            string path = loadData.FileName;
+            file = path;
+            crear_arbol_libreria(path);
 
-            DataTable dataset = manager.
+        }
+
+
+        private void crear_arbol_libreria(String path)
+        {
+            DataManager dataTesting = new DataManager();
+            dataTesting.createTable(path);
+            DataTable dataset = dataTesting.GetDataTable();
             var codebook = new Codification(dataset);
 
             // Translate our training data into integer symbols using our codebook:
             DataTable symbols = codebook.Apply(dataset);
-            int[][] inputs = symbols.ToArray<int>("Outlook", "Temperature", "Humidity", "Wind");
-            int[] outputs = symbols.ToArray<int>("PlayTennis");
+            int[][] inputs = symbols.ToArray<int>("race/ethnicity", "lunch", "test preparation course");
+            int[] outputs = symbols.ToArray<int>("output");
+
+            var id3learning = new ID3Learning()
+            {
+                new DecisionVariable("race/ethnicity",     5), // 3 possible values (group A, group B, group C, group D, group E)
+                new DecisionVariable("lunch", 3), // 3 possible values (free/reduce,standard)  
+                new DecisionVariable("test preparation course",    2), // 2 possible values (completed, none)    
+
+
+            };
+
+            // Learn the training instances!
+            DecisionTree tree = id3learning.Learn(inputs, outputs);
+
+            // Compute the training error when predicting training instances
+            double error = new ZeroOneLoss(outputs).Loss(tree.Decide(inputs));
+            MessageBox.Show(error+"", "Error del modelo");
+
+
+            // The tree can now be queried for new examples through 
+            // its decide method. For example, we can create a query
+
+            int[] query = codebook.Transform(new[,]
+            {
+                { "race/ethnicity",                "group C"  },
+                { "lunch",                        "standard"  },
+                { "test preparation course",    "completed"   }
+            });
+            loadData.ShowDialog();////agregado
+            path = loadData.FileName;//////agregado
+            file = path;///////agergad
+            crear_arbol_libreria(path);////////agregado
+
+            // And then predict the label using
+            int predicted = tree.Decide(query);  // result will be 0
+
+            // We can translate it back to strings using
+            string answer = codebook.Revert("output", predicted); // Answer will be: "No"
+
+            MessageBox.Show(answer, "Titulo");
+            Console.WriteLine(answer);
+
+            
 
 
         }
 
+        private static void SplitTable(DataTable originalTable, int batchSize)
+        {/*
+            List<DataTable> tables = new List<DataTable>();
+            int i = 0;
+            int j = 1;
+            DataTable newDt = originalTable.Clone();
+            newDt.TableName = "Table_" + j;
+            newDt.Clear();
+            foreach (DataRow row in originalTable.Rows)
+            {
+                DataRow newRow = newDt.NewRow();
+                newRow.ItemArray = row.ItemArray;
+                newDt.Rows.Add(newRow);
+                i++;
+                if (i == batchSize)
+                {
+                    tables.Add(newDt);
+                    j++;
+                    newDt = originalTable.Clone();
+                    newDt.TableName = "Table_" + j;
+                    newDt.Clear();
+                    i = 0;
+                }
+            }
+            return tables;*/
+        }
 
-        private void crear_arbol_libreria()
+        private void dividir_datatable(int conjunto, DataTable dataT)
         {
+            
+            
+            /*
+            DataTable aRetornar = new DataTable();
+            if (conjunto == 0) //Testing
+            {
+                var columnas = dataT.Rows[0].ItemArray;
+                //aRetornar.Columns.Add("Hola","Apellido");
+                for(int i = 0; i < (dataT.Rows.Count)*0.7; i++)
+                {
+                    aRetornar.Rows.Add(dataT.Rows[0]);
+                }
+            }
+            else
+            {
 
+            }
+
+            return aRetornar;*/
         }
+
     }
 }
