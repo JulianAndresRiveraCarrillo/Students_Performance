@@ -235,19 +235,24 @@ namespace Student_Performance.Gui
 
         private void btn_arbol_libreria_Click(object sender, EventArgs e)
         {
-            loadData.ShowDialog();
+            /*loadData.ShowDialog();
             string path = loadData.FileName;
-            file = path;
-            crear_arbol_libreria(path);
+            file = path;*/
+            crear_arbol_libreria("path");
 
         }
 
 
         private void crear_arbol_libreria(String path)
         {
-            DataManager dataTesting = new DataManager();
-            dataTesting.createTable(path);
-            DataTable dataset = dataTesting.GetDataTable();
+
+
+            /*DataManager dataTesting = new DataManager();
+            dataTesting.createTable("Student_Performance/Data/exams_training.csv");
+            DataTable dataset = dataTesting.GetDataTable();*/
+
+            //DataTable dataset = dividir_datatable(0, manager.GetDataTable());
+            DataTable dataset = manager.GetDataTable().Copy();
             var codebook = new Codification(dataset);
 
             // Translate our training data into integer symbols using our codebook:
@@ -269,7 +274,8 @@ namespace Student_Performance.Gui
 
             // Compute the training error when predicting training instances
             double error = new ZeroOneLoss(outputs).Loss(tree.Decide(inputs));
-            MessageBox.Show(error+"", "Error del modelo");
+            MessageBox.Show("El árbol ya aprendió con los datos de entrenamiento.", "Training Data");
+            MessageBox.Show("El error de los.", "Training Data");
 
 
             // The tree can now be queried for new examples through 
@@ -281,10 +287,6 @@ namespace Student_Performance.Gui
                 { "lunch",                        "standard"  },
                 { "test preparation course",    "completed"   }
             });
-            loadData.ShowDialog();////agregado
-            path = loadData.FileName;//////agregado
-            file = path;///////agergad
-            crear_arbol_libreria(path);////////agregado
 
             // And then predict the label using
             int predicted = tree.Decide(query);  // result will be 0
@@ -292,62 +294,40 @@ namespace Student_Performance.Gui
             // We can translate it back to strings using
             string answer = codebook.Revert("output", predicted); // Answer will be: "No"
 
-            MessageBox.Show(answer, "Titulo");
-            Console.WriteLine(answer);
+            //MessageBox.Show(answer, "Titulo");
+            //Console.WriteLine(answer);
 
             
 
 
         }
 
-        private static void SplitTable(DataTable originalTable, int batchSize)
-        {/*
-            List<DataTable> tables = new List<DataTable>();
-            int i = 0;
-            int j = 1;
-            DataTable newDt = originalTable.Clone();
-            newDt.TableName = "Table_" + j;
-            newDt.Clear();
-            foreach (DataRow row in originalTable.Rows)
-            {
-                DataRow newRow = newDt.NewRow();
-                newRow.ItemArray = row.ItemArray;
-                newDt.Rows.Add(newRow);
-                i++;
-                if (i == batchSize)
-                {
-                    tables.Add(newDt);
-                    j++;
-                    newDt = originalTable.Clone();
-                    newDt.TableName = "Table_" + j;
-                    newDt.Clear();
-                    i = 0;
-                }
-            }
-            return tables;*/
-        }
+ 
 
-        private void dividir_datatable(int conjunto, DataTable dataT)
+        private DataTable dividir_datatable(int conjunto, DataTable dataT)
         {
-            
-            
-            /*
-            DataTable aRetornar = new DataTable();
+          
+            DataTable aRetornar = dataT.Copy();
+
             if (conjunto == 0) //Testing
             {
-                var columnas = dataT.Rows[0].ItemArray;
-                //aRetornar.Columns.Add("Hola","Apellido");
-                for(int i = 0; i < (dataT.Rows.Count)*0.7; i++)
+                int limit = 300;
+                for (int i = dataT.Rows.Count; i>limit; i--)
                 {
-                    aRetornar.Rows.Add(dataT.Rows[0]);
+                    aRetornar.Rows.RemoveAt(i);
+
+
                 }
             }
             else
             {
-
+                for (int i = 0; (i > 700) && (i<1000); i++)
+                {
+                    aRetornar.Rows.RemoveAt(i);
+                }
             }
 
-            return aRetornar;*/
+            return aRetornar;
         }
 
     }

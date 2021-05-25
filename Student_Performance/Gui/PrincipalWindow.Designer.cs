@@ -42,7 +42,6 @@ namespace Student_Performance.Gui
             this.label1 = new System.Windows.Forms.Label();
             this.dataView = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.OK3 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -67,7 +66,14 @@ namespace Student_Performance.Gui
             this.label4 = new System.Windows.Forms.Label();
             this.btn_arbol_propio = new System.Windows.Forms.Button();
             this.btn_arbol_libreria = new System.Windows.Forms.Button();
+            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -181,9 +187,9 @@ namespace Student_Performance.Gui
             // dataView
             // 
             this.dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataView.Location = new System.Drawing.Point(12, 93);
+            this.dataView.Location = new System.Drawing.Point(12, 125);
             this.dataView.Name = "dataView";
-            this.dataView.Size = new System.Drawing.Size(760, 314);
+            this.dataView.Size = new System.Drawing.Size(760, 282);
             this.dataView.TabIndex = 6;
             // 
             // tabPage2
@@ -196,13 +202,6 @@ namespace Student_Performance.Gui
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Graficar";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // graphicControl
-            // 
-            this.graphicControl.Location = new System.Drawing.Point(0, 0);
-            this.graphicControl.Name = "graphicControl";
-            this.graphicControl.Size = new System.Drawing.Size(756, 60);
-            this.graphicControl.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -226,7 +225,7 @@ namespace Student_Performance.Gui
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(756, 60);
+            this.tabPage1.Size = new System.Drawing.Size(756, 92);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Filtrar";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -436,12 +435,18 @@ namespace Student_Performance.Gui
             this.tabControl1.Location = new System.Drawing.Point(12, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(764, 86);
+            this.tabControl1.Size = new System.Drawing.Size(764, 118);
             this.tabControl1.TabIndex = 5;
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label9);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.comboBox3);
+            this.tabPage3.Controls.Add(this.comboBox2);
+            this.tabPage3.Controls.Add(this.comboBox1);
             this.tabPage3.Controls.Add(this.btn_arbol_libreria);
             this.tabPage3.Controls.Add(this.btn_arbol_propio);
             this.tabPage3.Controls.Add(this.label5);
@@ -449,15 +454,15 @@ namespace Student_Performance.Gui
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(756, 60);
+            this.tabPage3.Size = new System.Drawing.Size(756, 92);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
+            this.tabPage3.Text = "Arboles";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(582, 10);
+            this.label5.Location = new System.Drawing.Point(585, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 13);
             this.label5.TabIndex = 3;
@@ -466,7 +471,7 @@ namespace Student_Performance.Gui
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(390, 13);
+            this.label4.Location = new System.Drawing.Point(457, 31);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 2;
@@ -474,7 +479,7 @@ namespace Student_Performance.Gui
             // 
             // btn_arbol_propio
             // 
-            this.btn_arbol_propio.Location = new System.Drawing.Point(585, 27);
+            this.btn_arbol_propio.Location = new System.Drawing.Point(588, 46);
             this.btn_arbol_propio.Name = "btn_arbol_propio";
             this.btn_arbol_propio.Size = new System.Drawing.Size(110, 23);
             this.btn_arbol_propio.TabIndex = 4;
@@ -484,7 +489,7 @@ namespace Student_Performance.Gui
             // 
             // btn_arbol_libreria
             // 
-            this.btn_arbol_libreria.Location = new System.Drawing.Point(393, 27);
+            this.btn_arbol_libreria.Location = new System.Drawing.Point(460, 45);
             this.btn_arbol_libreria.Name = "btn_arbol_libreria";
             this.btn_arbol_libreria.Size = new System.Drawing.Size(102, 23);
             this.btn_arbol_libreria.TabIndex = 5;
@@ -492,14 +497,72 @@ namespace Student_Performance.Gui
             this.btn_arbol_libreria.UseVisualStyleBackColor = true;
             this.btn_arbol_libreria.Click += new System.EventHandler(this.btn_arbol_libreria_Click);
             // 
+            // graphicControl
+            // 
+            this.graphicControl.Location = new System.Drawing.Point(0, 0);
+            this.graphicControl.Name = "graphicControl";
+            this.graphicControl.Size = new System.Drawing.Size(756, 60);
+            this.graphicControl.TabIndex = 0;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(8, 63);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(139, 62);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 21);
+            this.comboBox2.TabIndex = 7;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(271, 62);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(121, 21);
+            this.comboBox3.TabIndex = 8;
+            // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(6, 10);
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 46);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(273, 47);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "A continuación podrás elegir cómo mostrar el arbol en pantalla: 1) Mediante la im" +
-    "plementación propia 2) Utilizando librerias externas de ML";
+            this.label6.Size = new System.Drawing.Size(72, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "race/ethnicity";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(144, 45);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Lunch";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(272, 46);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "test preparation course";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(141, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(107, 13);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Variables de entrada.";
             // 
             // PrincipalWindow
             // 
@@ -568,6 +631,12 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_arbol_propio;
         private System.Windows.Forms.Button btn_arbol_libreria;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
