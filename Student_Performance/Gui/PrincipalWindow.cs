@@ -238,9 +238,21 @@ namespace Student_Performance.Gui
             /*loadData.ShowDialog();
             string path = loadData.FileName;
             file = path;*/
+            string variable1 = comboBoxVariable1.Text;
+            string variable2 = comboBoxVariable2.Text;
+            string variable3 = comboBoxVariable3.Text;
 
-
-            crear_arbol_libreria("path");
+            if(variable1==""|| variable2=="" || variable3=="")
+            {
+                MessageBox.Show("Agrega las 3 variables de entrada.", "Lo sentimos");
+            }else if (manager.GetDataTable().Rows.Count==0)
+            {
+                MessageBox.Show("Agrega la base de datos", "Lo sentimos");
+            }
+            else
+            {
+                crear_arbol_libreria("path");
+            }
 
         }
 
