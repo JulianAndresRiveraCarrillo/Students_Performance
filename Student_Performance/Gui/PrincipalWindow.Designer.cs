@@ -72,10 +72,10 @@ namespace Student_Performance.Gui
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
             this.labelErrorTesting = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
+            this.label11 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -442,9 +442,9 @@ namespace Student_Performance.Gui
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.label10);
             this.tabPage3.Controls.Add(this.labelErrorTesting);
-            this.tabPage3.Controls.Add(this.label9);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label6);
@@ -466,7 +466,7 @@ namespace Student_Performance.Gui
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(582, 18);
+            this.label5.Location = new System.Drawing.Point(617, 5);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 13);
             this.label5.TabIndex = 3;
@@ -475,15 +475,16 @@ namespace Student_Performance.Gui
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(452, 21);
+            this.label4.Location = new System.Drawing.Point(617, 52);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Librería Accord.NET";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btn_arbol_propio
             // 
-            this.btn_arbol_propio.Location = new System.Drawing.Point(585, 35);
+            this.btn_arbol_propio.Location = new System.Drawing.Point(620, 22);
             this.btn_arbol_propio.Name = "btn_arbol_propio";
             this.btn_arbol_propio.Size = new System.Drawing.Size(110, 23);
             this.btn_arbol_propio.TabIndex = 4;
@@ -493,9 +494,9 @@ namespace Student_Performance.Gui
             // 
             // btn_arbol_libreria
             // 
-            this.btn_arbol_libreria.Location = new System.Drawing.Point(455, 35);
+            this.btn_arbol_libreria.Location = new System.Drawing.Point(620, 66);
             this.btn_arbol_libreria.Name = "btn_arbol_libreria";
-            this.btn_arbol_libreria.Size = new System.Drawing.Size(102, 23);
+            this.btn_arbol_libreria.Size = new System.Drawing.Size(110, 23);
             this.btn_arbol_libreria.TabIndex = 5;
             this.btn_arbol_libreria.Text = "Generar Árbol";
             this.btn_arbol_libreria.UseVisualStyleBackColor = true;
@@ -505,11 +506,11 @@ namespace Student_Performance.Gui
             // 
             this.comboBoxVariable1.FormattingEnabled = true;
             this.comboBoxVariable1.Items.AddRange(new object[] {
-            "grupo A",
-            "grupo B",
-            "grupo C",
-            "grupo D",
-            "grupo E"});
+            "group A",
+            "group B",
+            "group C",
+            "group D",
+            "group E"});
             this.comboBoxVariable1.Location = new System.Drawing.Point(8, 63);
             this.comboBoxVariable1.Name = "comboBoxVariable1";
             this.comboBoxVariable1.Size = new System.Drawing.Size(121, 21);
@@ -564,14 +565,25 @@ namespace Student_Performance.Gui
             this.label8.TabIndex = 11;
             this.label8.Text = "test preparation course";
             // 
-            // label9
+            // labelErrorTesting
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(141, 14);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(107, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Variables de entrada.";
+            this.labelErrorTesting.AutoSize = true;
+            this.labelErrorTesting.Location = new System.Drawing.Point(493, 62);
+            this.labelErrorTesting.Name = "labelErrorTesting";
+            this.labelErrorTesting.Size = new System.Drawing.Size(13, 13);
+            this.labelErrorTesting.TabIndex = 13;
+            this.labelErrorTesting.Text = "0";
+            this.labelErrorTesting.Click += new System.EventHandler(this.labelErrorTesting_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(424, 62);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 13);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Error testing";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // graphicControl
             // 
@@ -580,24 +592,15 @@ namespace Student_Performance.Gui
             this.graphicControl.Size = new System.Drawing.Size(756, 60);
             this.graphicControl.TabIndex = 0;
             // 
-            // labelErrorTesting
+            // label11
             // 
-            this.labelErrorTesting.AutoSize = true;
-            this.labelErrorTesting.Location = new System.Drawing.Point(582, 70);
-            this.labelErrorTesting.Name = "labelErrorTesting";
-            this.labelErrorTesting.Size = new System.Drawing.Size(13, 13);
-            this.labelErrorTesting.TabIndex = 13;
-            this.labelErrorTesting.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(513, 70);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Error testing";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(3, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(599, 13);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "¿Qué tan probable es que alguien con los valores de las variables de abajo haya s" +
+    "acado una suma de scores superior a 200?";
             // 
             // PrincipalWindow
             // 
@@ -610,6 +613,7 @@ namespace Student_Performance.Gui
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrincipalWindow";
             this.Text = "StudentPerformance ::SP";
+            this.Load += new System.EventHandler(this.PrincipalWindow_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -666,7 +670,6 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_arbol_propio;
         private System.Windows.Forms.Button btn_arbol_libreria;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -675,5 +678,6 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.ComboBox comboBoxVariable1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label labelErrorTesting;
+        private System.Windows.Forms.Label label11;
     }
 }

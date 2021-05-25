@@ -251,16 +251,16 @@ namespace Student_Performance.Gui
             }
             else
             {
-                crear_arbol_libreria("path", variable1, variable2, variable3);
+                crear_arbol_libreria("path", variable1, variable2,variable3);
             }
 
         }
 
 
-        private void crear_arbol_libreria(string path, string variable1, string variable2, string variable3)
+        private void crear_arbol_libreria(String path, string variable1, string variable2, String variable3)
         {
 
-            MessageBox.Show(variable1 + "", "veamos");
+
             /*DataManager dataTesting = new DataManager();
             dataTesting.createTable("Student_Performance/Data/exams_training.csv");
             DataTable dataset = dataTesting.GetDataTable();*/
@@ -308,7 +308,7 @@ namespace Student_Performance.Gui
             // We can translate it back to strings using
             string answer = codebook.Revert("output", predicted); // Answer will be: "No"
 
-            MessageBox.Show("La predicción para; "+variable1+" - "+variable2+" - "+variable3+" es: \n"+answer, "Predicción");
+            MessageBox.Show("La predicción para las variables "+variable1+" - "+variable2+" - "+variable3+" es:\n"+answer, "Predicción");
             //Console.WriteLine(answer);
 
             
@@ -345,6 +345,26 @@ namespace Student_Performance.Gui
         }
 
         private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelErrorTesting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PrincipalWindow_Load(object sender, EventArgs e)
         {
 
         }
