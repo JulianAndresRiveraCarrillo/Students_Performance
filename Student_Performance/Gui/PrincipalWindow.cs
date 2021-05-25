@@ -238,6 +238,8 @@ namespace Student_Performance.Gui
             /*loadData.ShowDialog();
             string path = loadData.FileName;
             file = path;*/
+
+
             crear_arbol_libreria("path");
 
         }
@@ -274,8 +276,8 @@ namespace Student_Performance.Gui
 
             // Compute the training error when predicting training instances
             double error = new ZeroOneLoss(outputs).Loss(tree.Decide(inputs));
+            labelErrorTesting.Text =error + "";
             MessageBox.Show("El árbol ya aprendió con los datos de entrenamiento.", "Training Data");
-            MessageBox.Show("El error de los.", "Training Data");
 
 
             // The tree can now be queried for new examples through 
@@ -330,5 +332,9 @@ namespace Student_Performance.Gui
             return aRetornar;
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
