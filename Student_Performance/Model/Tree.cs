@@ -19,6 +19,8 @@ namespace Student_Performance.Model
 
 			/*if (entropiaTotal == 0.0 && !instancias.isEmpty())
 			{
+				//
+				//List<String> instancia = instancias.get(0);
 				//List<String> instancia = instancias.get(0);
 				//Node nodo = new Node(instancia.get(instancia.Count - 1).toUpperCase(), 0, true);
 				//return nodo;
