@@ -66,14 +66,14 @@ namespace Student_Performance.Gui
             this.label4 = new System.Windows.Forms.Label();
             this.btn_arbol_propio = new System.Windows.Forms.Button();
             this.btn_arbol_libreria = new System.Windows.Forms.Button();
-            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxVariable1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxVariable2 = new System.Windows.Forms.ComboBox();
+            this.comboBoxVariable3 = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.graphicControl = new Student_Performance.Gui.GraphicWindow();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -198,7 +198,7 @@ namespace Student_Performance.Gui
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(756, 60);
+            this.tabPage2.Size = new System.Drawing.Size(756, 92);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Graficar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -444,9 +444,9 @@ namespace Student_Performance.Gui
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Controls.Add(this.label7);
             this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.comboBox3);
-            this.tabPage3.Controls.Add(this.comboBox2);
-            this.tabPage3.Controls.Add(this.comboBox1);
+            this.tabPage3.Controls.Add(this.comboBoxVariable3);
+            this.tabPage3.Controls.Add(this.comboBoxVariable2);
+            this.tabPage3.Controls.Add(this.comboBoxVariable1);
             this.tabPage3.Controls.Add(this.btn_arbol_libreria);
             this.tabPage3.Controls.Add(this.btn_arbol_propio);
             this.tabPage3.Controls.Add(this.label5);
@@ -497,36 +497,41 @@ namespace Student_Performance.Gui
             this.btn_arbol_libreria.UseVisualStyleBackColor = true;
             this.btn_arbol_libreria.Click += new System.EventHandler(this.btn_arbol_libreria_Click);
             // 
-            // graphicControl
+            // comboBoxVariable1
             // 
-            this.graphicControl.Location = new System.Drawing.Point(0, 0);
-            this.graphicControl.Name = "graphicControl";
-            this.graphicControl.Size = new System.Drawing.Size(756, 60);
-            this.graphicControl.TabIndex = 0;
+            this.comboBoxVariable1.FormattingEnabled = true;
+            this.comboBoxVariable1.Items.AddRange(new object[] {
+            "grupo A",
+            "grupo B",
+            "grupo C",
+            "grupo D",
+            "grupo E"});
+            this.comboBoxVariable1.Location = new System.Drawing.Point(8, 63);
+            this.comboBoxVariable1.Name = "comboBoxVariable1";
+            this.comboBoxVariable1.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxVariable1.TabIndex = 6;
             // 
-            // comboBox1
+            // comboBoxVariable2
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(8, 63);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 6;
+            this.comboBoxVariable2.FormattingEnabled = true;
+            this.comboBoxVariable2.Items.AddRange(new object[] {
+            "standard",
+            "free/reduced"});
+            this.comboBoxVariable2.Location = new System.Drawing.Point(139, 62);
+            this.comboBoxVariable2.Name = "comboBoxVariable2";
+            this.comboBoxVariable2.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxVariable2.TabIndex = 7;
             // 
-            // comboBox2
+            // comboBoxVariable3
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(139, 62);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 7;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(271, 62);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 21);
-            this.comboBox3.TabIndex = 8;
+            this.comboBoxVariable3.FormattingEnabled = true;
+            this.comboBoxVariable3.Items.AddRange(new object[] {
+            "completed",
+            "none"});
+            this.comboBoxVariable3.Location = new System.Drawing.Point(271, 62);
+            this.comboBoxVariable3.Name = "comboBoxVariable3";
+            this.comboBoxVariable3.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxVariable3.TabIndex = 8;
             // 
             // label6
             // 
@@ -563,6 +568,13 @@ namespace Student_Performance.Gui
             this.label9.Size = new System.Drawing.Size(107, 13);
             this.label9.TabIndex = 12;
             this.label9.Text = "Variables de entrada.";
+            // 
+            // graphicControl
+            // 
+            this.graphicControl.Location = new System.Drawing.Point(0, 0);
+            this.graphicControl.Name = "graphicControl";
+            this.graphicControl.Size = new System.Drawing.Size(756, 60);
+            this.graphicControl.TabIndex = 0;
             // 
             // PrincipalWindow
             // 
@@ -635,8 +647,8 @@ namespace Student_Performance.Gui
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxVariable3;
+        private System.Windows.Forms.ComboBox comboBoxVariable2;
+        private System.Windows.Forms.ComboBox comboBoxVariable1;
     }
 }
