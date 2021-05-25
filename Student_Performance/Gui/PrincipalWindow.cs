@@ -251,16 +251,16 @@ namespace Student_Performance.Gui
             }
             else
             {
-                crear_arbol_libreria("path");
+                crear_arbol_libreria("path", variable1, variable2, variable3);
             }
 
         }
 
 
-        private void crear_arbol_libreria(String path)
+        private void crear_arbol_libreria(string path, string variable1, string variable2, string variable3)
         {
 
-
+            MessageBox.Show(variable1 + "", "veamos");
             /*DataManager dataTesting = new DataManager();
             dataTesting.createTable("Student_Performance/Data/exams_training.csv");
             DataTable dataset = dataTesting.GetDataTable();*/
@@ -297,9 +297,9 @@ namespace Student_Performance.Gui
 
             int[] query = codebook.Transform(new[,]
             {
-                { "race/ethnicity",                "group C"  },
-                { "lunch",                        "standard"  },
-                { "test preparation course",    "completed"   }
+                { "race/ethnicity",                variable1  },
+                { "lunch",                        variable2  },
+                { "test preparation course",    variable3   }
             });
 
             // And then predict the label using
@@ -308,7 +308,7 @@ namespace Student_Performance.Gui
             // We can translate it back to strings using
             string answer = codebook.Revert("output", predicted); // Answer will be: "No"
 
-            //MessageBox.Show(answer, "Titulo");
+            MessageBox.Show("La predicción para; "+variable1+" - "+variable2+" - "+variable3+" es: \n"+answer, "Predicción");
             //Console.WriteLine(answer);
 
             
