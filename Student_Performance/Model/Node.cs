@@ -1,94 +1,35 @@
-﻿using System;
-using System.Collections;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Student_Performance.Model
 {
 	class Node
 	{
-		private String id;
-		private int posicionAtributos;
-		public ArrayList children;
-		public ArrayList valores;
-		private bool isfinal2;
+        public string Name { get; }
 
+        public string Edge { get; }
 
+        public Attribute NodeAttribute { get; }
 
-		public Node(String id, int pos, bool isfinal)
-		{
+        public List<Node> ChildNodes { get; }
 
-			this.id = id;
-			this.posicionAtributos = pos;
-			this.children = new ArrayList();
-			this.valores = new ArrayList();
-			this.isfinal2 = isfinal;
-		}
-		public String getId()
-		{
-			return id;
-		}
+        public int TableIndex { get; }
 
-		public int getPosicionAtributos()
-		{
-			return posicionAtributos;
-		}
+        public bool IsLeaf { get; }
 
-		public void setData(String data)
-		{
-			valores.Add(data);
-		}
+        public Node(string name, int tableIndex, Attribute nodeAttribute, string edge)
+        {
+            Name = name;
+            TableIndex = tableIndex;
+            NodeAttribute = nodeAttribute;
+            ChildNodes = new List<Node>();
+            Edge = edge;
+        }
 
-		public ArrayList getData()
-		{
-			return valores;
-		}
-
-		public void setChildren(Node nodo)
-		{
-			children.Add(nodo);
-		}
-
-		public ArrayList getChildren()
-		{
-			return children;
-		}
-
-		public bool isfinal()
-		{
-			return isfinal2;
-		}
-
-		public void pintarArbol(Node nodo, int nivel)
-		{
-			Console.WriteLine(nodo.getId());
-
-			if (!nodo.isfinal())
-			{
-				ArrayList hijos = nodo.getChildren();
-				ArrayList data = nodo.getData();
-				String valor;
-
-				for (int i = 0; i < data.Count; i++)
-				{
-				//	valor = data.get(i);
-					pintarSangria(nivel);
-					//Console.WriteLine(valor + "-->");
-				//	pintarArbol(hijos.get(i), nivel + 2);
-				}
-			}
-		}
-
-		private void pintarSangria(int nivel)
-		{
-			for (int i = 0; i < nivel; i++)
-			{
-				Console.WriteLine("             ");
-			}
-
-		}
-
-
-	}
+        public Node(bool isleaf, string name, string edge)
+        {
+            IsLeaf = isleaf;
+            Name = name;
+            Edge = edge;
+        }
+    }
 }

@@ -88,7 +88,6 @@
     <Compile Include="Model\GraphManager.cs" />
     <Compile Include="Model\Node.cs" />
     <Compile Include="Model\Student.cs" />
-    <Compile Include="Model\Tree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gui\PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
