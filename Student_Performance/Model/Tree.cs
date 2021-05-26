@@ -5,9 +5,56 @@ using System.Linq;
 
 namespace Student_Performance.Model
 {
-    class Tree
+     class Tree
     {
         public Node Root { get; set; }
+
+        public static string Print(Node node, string result)
+        {
+            string prediction = "null";
+            /*
+            if (node?.ChildNodes == null || node.ChildNodes.Count == 0)
+            {
+                var seperatedResult = result.Split(' ');
+
+                foreach (var item in seperatedResult)
+                {
+                    if (item.Equals(seperatedResult[0]))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Magenta;
+                    }
+                    else if (item.Equals("--") || item.Equals("-->"))
+                    {
+                        // empty if but better than checking at .ToUpper() and .ToLower() if
+                    }
+                    else if (item.Equals("YES") || item.Equals("NO"))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                    else if (item.ToUpper().Equals(item))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                    }
+
+                    Console.Write($"{item} ");
+                    Console.ResetColor();
+                }
+
+                Console.WriteLine();
+
+                return;
+            }
+
+            foreach (var child in node.ChildNodes)
+            {
+                Print(child, result + " -- " + child.Edge.ToLower() + " --> " + child.Name.ToUpper());
+            }*/
+            return prediction;
+        }
 
         public static string CalculateResult(Node root, IDictionary<string, string> valuesForQuery, string result)
         {
@@ -35,10 +82,11 @@ namespace Student_Performance.Model
                     }
                 }
             }
-            // Si el usuario ingres aun atributo invalido
+
+            // if the user entered an invalid attribute
             if (!valueFound)
             {
-                result = "Attribute not found";
+                result = "Atributo no encontrado";
             }
 
             return result;
@@ -50,10 +98,10 @@ namespace Student_Performance.Model
 
             foreach (var item in root.NodeAttribute.DifferentAttributeNames)
             {
-                //Si el nodo es hoja, se agrega al metodo
+                // if a leaf, leaf will be added in this method
                 var isLeaf = CheckIfIsLeaf(root, data, item);
 
-                //Hacer un llamado recursivo si el nodo no es una hoja
+                // make a recursive call as long as the node is not a leaf
                 if (!isLeaf)
                 {
                     var reducedTable = CreateSmallerTable(data, item, root.TableIndex);
@@ -61,6 +109,7 @@ namespace Student_Performance.Model
                     root.ChildNodes.Add(Learn(reducedTable, item));
                 }
             }
+
             return root;
         }
 
@@ -69,7 +118,7 @@ namespace Student_Performance.Model
             var isLeaf = true;
             var allEndValues = new List<string>();
 
-            // Obtener todos los valores de la hoja para el atributo en cuestion
+            // get all leaf values for the attribute in question
             for (var i = 0; i < data.Rows.Count; i++)
             {
                 if (data.Rows[i][root.TableIndex].ToString().Equals(attributeToCheck))
@@ -77,16 +126,19 @@ namespace Student_Performance.Model
                     allEndValues.Add(data.Rows[i][data.Columns.Count - 1].ToString());
                 }
             }
-            // Comprobar si todos los elementos de la lista tienen el mismo valor
+
+            // check whether all elements of the list have the same value
             if (allEndValues.Count > 0 && allEndValues.Any(x => x != allEndValues[0]))
             {
                 isLeaf = false;
             }
-            //Crear una hoja con alor para mostrar y edge a la hoja
+
+            // create leaf with value to display and edge to the leaf
             if (isLeaf)
             {
                 root.ChildNodes.Add(new Node(true, allEndValues[0], attributeToCheck));
             }
+
             return isLeaf;
         }
 
@@ -94,12 +146,13 @@ namespace Student_Performance.Model
         {
             var smallerData = new DataTable();
 
-            //Agregar los titulos de las columnas
+            // add column titles
             for (var i = 0; i < data.Columns.Count; i++)
             {
                 smallerData.Columns.Add(data.Columns[i].ToString());
             }
-            //Agregar filas que contienen edgePointingToNextNode a la nueva tabla de datos
+
+            // add rows which contain edgePointingToNextNode to new datatable
             for (var i = 0; i < data.Rows.Count; i++)
             {
                 if (data.Rows[i][rootTableIndex].ToString().Equals(edgePointingToNextNode))
@@ -114,7 +167,8 @@ namespace Student_Performance.Model
                     smallerData.Rows.Add(row);
                 }
             }
-            //Remover la columna que ha sido usada como nodo          
+
+            // remove column which was already used as node            
             smallerData.Columns.Remove(smallerData.Columns[rootTableIndex]);
 
             return smallerData;
@@ -126,14 +180,14 @@ namespace Student_Performance.Model
             var highestInformationGainIndex = -1;
             var highestInformationGain = double.MinValue;
 
-            // Obtener todos los nombres, cantidad de atributos y atributos para cada columna            
-            for (var i = 1; i < data.Columns.Count; i++)
+            // Get all names, amount of attributes and attributes for every column             
+            for (var i = 1; i <= data.Columns.Count; i++)
             {
                 var differentAttributenames = Attribute.GetDifferentAttributeNamesOfColumn(data, i - 1);
                 attributes.Add(new Attribute(data.Columns[i - 1].ToString(), differentAttributenames));
             }
 
-            //Calculo de la entropia
+            // Calculate Entropy (S)
             var tableEntropy = CalculateTableEntropy(data);
 
             for (var i = 0; i < attributes.Count; i++)
@@ -158,11 +212,11 @@ namespace Student_Performance.Model
 
             foreach (var item in amountForDifferentValue)
             {
-                // Ayudas para el calculo
+                // helper for calculation
                 var firstDivision = item[0, 1] / (double)item[0, 0];
                 var secondDivision = (item[0, 0] - item[0, 1]) / (double)item[0, 0];
 
-                // Prevenir la excepcion de division entre 0
+                // prevent dividedByZeroException
                 if (firstDivision == 0 || secondDivision == 0)
                 {
                     stepsForCalculation.Add(0.0);
@@ -172,6 +226,7 @@ namespace Student_Performance.Model
                     stepsForCalculation.Add(-firstDivision * Math.Log(firstDivision, 2) - secondDivision * Math.Log(secondDivision, 2));
                 }
             }
+
             var gain = stepsForCalculation.Select((t, i) => amountForDifferentValue[i][0, 0] / (double)totalRows * t).Sum();
 
             gain = entropyOfDataset - gain;
@@ -208,16 +263,18 @@ namespace Student_Performance.Model
                     {
                         amount++;
 
-                        //Cuenta los casos positivos y luego agrega la suma a la matriz para el calculo
+                        // Counts the positive cases and adds the sum later to the array for the calculation
                         if (data.Rows[i][data.Columns.Count - 1].ToString().Equals(data.Rows[0][data.Columns.Count - 1]))
                         {
                             positiveAmount++;
                         }
                     }
                 }
+
                 int[,] array = { { amount, positiveAmount } };
                 foundValues.Add(array);
             }
+
             return foundValues;
         }
 
@@ -225,7 +282,7 @@ namespace Student_Performance.Model
         {
             var knownValues = new List<string>();
 
-            // Agrega el valor en la primera fila 
+            // add the value of the first row to the list
             if (data.Rows.Count > 0)
             {
                 knownValues.Add(data.Rows[0][indexOfColumnToCheck].ToString());
@@ -240,6 +297,7 @@ namespace Student_Performance.Model
                     knownValues.Add(data.Rows[j][indexOfColumnToCheck].ToString());
                 }
             }
+
             return knownValues;
         }
     }

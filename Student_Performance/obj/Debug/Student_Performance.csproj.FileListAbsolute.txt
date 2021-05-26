@@ -34,3 +34,15 @@ C:\Users\icesi\Source\Repos\Students_Performance\Student_Performance\obj\Debug\S
 C:\Users\icesi\Source\Repos\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.CopyComplete
 C:\Users\icesi\Source\Repos\Students_Performance\Student_Performance\obj\Debug\Student_Performance.exe
 C:\Users\icesi\Source\Repos\Students_Performance\Student_Performance\obj\Debug\Student_Performance.pdb
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.dll.config
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.dll
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.MachineLearning.dll
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Math.Core.dll
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Math.dll
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Statistics.dll
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.xml
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.MachineLearning.xml
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Math.xml
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Math.Core.xml
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Statistics.xml
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.CopyComplete

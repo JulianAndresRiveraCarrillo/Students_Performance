@@ -230,7 +230,14 @@ namespace Student_Performance.Gui
 
         private void btn_arbol_propio_Click(object sender, EventArgs e)
         {
+            loadData.ShowDialog();
+            string path = loadData.FileName;
 
+            if (ImportFromCsvFile(path) != null)
+            {
+                DataTable data = ImportFromCsvFile(path);
+                CreateTreeAndHandleUserOperation(data);
+            }
         }
 
         private void btn_arbol_libreria_Click(object sender, EventArgs e)
@@ -256,11 +263,113 @@ namespace Student_Performance.Gui
 
         }
 
+        public static DataTable ImportFromCsvFile(string filePath)
+        {
+            var rows = 0;
+            var data = new DataTable();
+
+            try
+            {
+                using (var reader = new System.IO.StreamReader(System.IO.File.OpenRead(filePath)))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        var values = line.Substring(0, line.Length - 1).Split(';');
+
+                        foreach (var item in values)
+                        {
+                            if (string.IsNullOrEmpty(item) || string.IsNullOrWhiteSpace(item))
+                            {
+                                throw new Exception("Value can't be empty");
+                            }
+
+                            if (rows == 0)
+                            {
+                                data.Columns.Add(item);
+                            }
+                        }
+
+                        if (rows > 0)
+                        {
+                            data.Rows.Add(values);
+                        }
+
+                        rows++;
+
+                        if (values.Length != data.Columns.Count)
+                        {
+                            throw new Exception("Row is shorter or longer than title row");
+                        }
+                    }
+                }
+                var differentValuesOfLastColumn = Model.Attribute.GetDifferentAttributeNamesOfColumn(data, data.Columns.Count - 1);
+
+                if (differentValuesOfLastColumn.Count > 2)
+                {
+                    throw new Exception("The last column is the result column and can contain only 2 different values");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                data = null;
+            }
+            // Si no se ingresan filas o data == null retorna null¿
+            return data?.Rows.Count > 0 ? data : null;
+        }
+
+        private static void CreateTreeAndHandleUserOperation(DataTable data)
+        {
+            var decisionTree = new Tree();
+            decisionTree.Root = Tree.Learn(data, "");
+            bool exit = false;
+
+            MessageBox.Show("Arbol de decision creado","INFORMACION",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            
+            do
+            {
+                var valuesForQuery = new Dictionary<string, string>();
+
+                // Bucle para la entrada de datos para la consulta 
+                for (var i = 0; i < data.Columns.Count - 1; i++)
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine($"\nEnter your value for {data.Columns[i]}");
+                    Console.ResetColor();
+                    var input = ReadLineTrimmed();
+
+                   /* if (input.ToUpper().Equals("PRINT"))
+                    {
+                        Console.WriteLine();
+                        Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper());
+                        MessageBox.Show("Due to the limitation of the console the tree is displayed as a list of every possible route. The colors indicate the following values:");
+
+                        i--;
+                    }*/
+                    var result = Tree.CalculateResult(decisionTree.Root, valuesForQuery, "");
+
+                    if (result.Contains("Atributo no encontrado"))
+                    {
+                         MessageBox.Show("No se puede calcular el resultado. No se encontró una ruta válida a través del árbol.", "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                    else
+                    {
+                        Tree.Print(null, result);
+                    }
+                 
+                }
+
+            } while (!exit) ;
+        }
+
+        private static string ReadLineTrimmed()
+        {
+            return Console.ReadLine().TrimStart().TrimEnd();
+        }
 
         private void crear_arbol_libreria(String path, string variable1, string variable2, String variable3)
-        {
-
-
+        { 
             /*DataManager dataTesting = new DataManager();
             dataTesting.createTable("Student_Performance/Data/exams_training.csv");
             DataTable dataset = dataTesting.GetDataTable();*/
@@ -310,13 +419,7 @@ namespace Student_Performance.Gui
 
             MessageBox.Show("La predicción para las variables "+variable1+" - "+variable2+" - "+variable3+" es:\n"+answer, "Predicción");
             //Console.WriteLine(answer);
-
-            
-
-
         }
-
- 
 
         private DataTable dividir_datatable(int conjunto, DataTable dataT)
         {
@@ -329,8 +432,6 @@ namespace Student_Performance.Gui
                 for (int i = dataT.Rows.Count; i>limit; i--)
                 {
                     aRetornar.Rows.RemoveAt(i);
-
-
                 }
             }
             else
@@ -340,33 +441,7 @@ namespace Student_Performance.Gui
                     aRetornar.Rows.RemoveAt(i);
                 }
             }
-
             return aRetornar;
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelErrorTesting_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PrincipalWindow_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

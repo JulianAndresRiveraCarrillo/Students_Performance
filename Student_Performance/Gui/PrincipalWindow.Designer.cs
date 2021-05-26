@@ -480,7 +480,6 @@ namespace Student_Performance.Gui
             this.label4.Size = new System.Drawing.Size(105, 13);
             this.label4.TabIndex = 2;
             this.label4.Text = "Librería Accord.NET";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // btn_arbol_propio
             // 
@@ -573,7 +572,6 @@ namespace Student_Performance.Gui
             this.labelErrorTesting.Size = new System.Drawing.Size(13, 13);
             this.labelErrorTesting.TabIndex = 13;
             this.labelErrorTesting.Text = "0";
-            this.labelErrorTesting.Click += new System.EventHandler(this.labelErrorTesting_Click);
             // 
             // label10
             // 
@@ -583,7 +581,6 @@ namespace Student_Performance.Gui
             this.label10.Size = new System.Drawing.Size(63, 13);
             this.label10.TabIndex = 14;
             this.label10.Text = "Error testing";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // graphicControl
             // 
@@ -613,7 +610,6 @@ namespace Student_Performance.Gui
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrincipalWindow";
             this.Text = "StudentPerformance ::SP";
-            this.Load += new System.EventHandler(this.PrincipalWindow_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
