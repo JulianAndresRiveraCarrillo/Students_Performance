@@ -83,8 +83,8 @@
     <Compile Include="Gui\GraphicWindow.Designer.cs">
       <DependentUpon>GraphicWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Attribute.cs" />
     <Compile Include="Model\DataManager.cs" />
-    <Compile Include="Model\Entropy.cs" />
     <Compile Include="Model\GraphManager.cs" />
     <Compile Include="Model\Node.cs" />
     <Compile Include="Model\Student.cs" />
