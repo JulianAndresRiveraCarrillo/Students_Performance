@@ -11,8 +11,6 @@ namespace Student_Performance.Model
 
         public static string Print(Node node, string result)
         {
-            string prediction = "null";
-            /*
             if (node?.ChildNodes == null || node.ChildNodes.Count == 0)
             {
                 var seperatedResult = result.Split(' ');
@@ -181,10 +179,10 @@ namespace Student_Performance.Model
             var highestInformationGain = double.MinValue;
 
             // Get all names, amount of attributes and attributes for every column             
-            for (var i = 1; i <= data.Columns.Count; i++)
+            for (var i = 0; i < data.Columns.Count-1; i++)
             {
-                var differentAttributenames = Attribute.GetDifferentAttributeNamesOfColumn(data, i - 1);
-                attributes.Add(new Attribute(data.Columns[i - 1].ToString(), differentAttributenames));
+                var differentAttributenames = Attribute.GetDifferentAttributeNamesOfColumn(data, i);
+                attributes.Add(new Attribute(data.Columns[i].ToString(), differentAttributenames));
             }
 
             // Calculate Entropy (S)

@@ -46,3 +46,4 @@ J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Acco
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Math.Core.xml
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Accord.Statistics.xml
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.CopyComplete
+J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.ResolveComReference.cache

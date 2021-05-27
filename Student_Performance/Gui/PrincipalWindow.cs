@@ -15,6 +15,8 @@ namespace Student_Performance.Gui
     {
         private DataManager  manager = new DataManager();
         public static string file;
+        private string dataTraining1; //Ruta del conjunto de datos de entrenamiento del arbol de decision propio
+        private bool loadData1 = false; //Si el entrenamiento del arbol propio se cargo sera verdadero si no falso
 
         public String File
         {
@@ -230,12 +232,22 @@ namespace Student_Performance.Gui
 
         private void btn_arbol_propio_Click(object sender, EventArgs e)
         {
-            loadData.ShowDialog();
-            string path = loadData.FileName;
-
-            if (ImportFromCsvFile(path) != null)
+            if (!loadData1)
             {
-                DataTable data = ImportFromCsvFile(path);
+                loadData.ShowDialog();
+                string path = loadData.FileName;
+                dataTraining1 = path;
+                loadData1 = true;
+
+                if (ImportFromCsvFile(path) != null)
+                {
+                    DataTable data = ImportFromCsvFile(path);
+                    CreateTreeAndHandleUserOperation(data);
+                }
+            }
+            else
+            {
+                DataTable data = ImportFromCsvFile(dataTraining1);
                 CreateTreeAndHandleUserOperation(data);
             }
         }
@@ -334,38 +346,42 @@ namespace Student_Performance.Gui
                 // Bucle para la entrada de datos para la consulta 
                 for (var i = 0; i < data.Columns.Count - 1; i++)
                 {
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine($"\nEnter your value for {data.Columns[i]}");
-                    Console.ResetColor();
-                    var input = ReadLineTrimmed();
+                    string entrada = Microsoft.VisualBasic.Interaction.InputBox($"Ingrese el valor para  {data.Columns[i]}", "CONSULTA", "", 1000, 0);
+                    var input = entrada.TrimStart().TrimEnd();
 
-                   /* if (input.ToUpper().Equals("PRINT"))
+                    if (input.ToUpper().Equals("PRINT"))
+                    {/*
+                         Console.WriteLine();
+                         Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper());
+                         MessageBox.Show("Due to the limitation of the console the tree is displayed as a list of every possible route. The colors indicate the following values:");
+
+                         i--;*/
+                    }else if (input.ToUpper().Equals("END"))
                     {
-                        Console.WriteLine();
-                        Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper());
-                        MessageBox.Show("Due to the limitation of the console the tree is displayed as a list of every possible route. The colors indicate the following values:");
-
-                        i--;
-                    }*/
+                        exit = true;
+                        i = data.Columns.Count;
+                    }
+                    else
+                    {
+                        valuesForQuery.Add(data.Columns[i].ToString(), input);
+                    }
+                    
+                }
+                if (!exit)
+                {
                     var result = Tree.CalculateResult(decisionTree.Root, valuesForQuery, "");
 
                     if (result.Contains("Atributo no encontrado"))
                     {
-                         MessageBox.Show("No se puede calcular el resultado. No se encontró una ruta válida a través del árbol.", "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("No se puede calcular el resultado. No se encontró una ruta válida a través del árbol.", "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                     else
                     {
-                        Tree.Print(null, result);
+                        MessageBox.Show(Tree.Print(null, result), "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                 
                 }
 
             } while (!exit) ;
-        }
-
-        private static string ReadLineTrimmed()
-        {
-            return Console.ReadLine().TrimStart().TrimEnd();
         }
 
         private void crear_arbol_libreria(String path, string variable1, string variable2, String variable3)
