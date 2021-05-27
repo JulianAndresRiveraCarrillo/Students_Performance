@@ -6,6 +6,7 @@ The Colombian Ministry of Education is in a state of concern due to the low acad
 
 The Ministry of Education at this time is already in the second stage of the project, therefore it has the responsibility of identifying the shortcomings and / or factors that affect the educational performance of students.
 
+
 ## Members
 - **_Julián Andrés Rivera_** :adult::computer:
 - **_Juan Camilo Castillo_** :adult::computer:
