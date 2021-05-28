@@ -18,6 +18,14 @@ namespace Student_Performance.Gui
         private string dataTraining1; //Ruta del conjunto de datos de entrenamiento del arbol de decision propio
         private bool loadData1 = false; //Si el entrenamiento del arbol propio se cargo sera verdadero si no falso
 
+        public bool exit;
+
+        public bool Exit
+        {
+            get => exit;
+            set => exit = value;
+        }
+
         public String File
         {
             get => file;
@@ -346,16 +354,17 @@ namespace Student_Performance.Gui
                 // Bucle para la entrada de datos para la consulta 
                 for (var i = 0; i < data.Columns.Count - 1; i++)
                 {
-                    string entrada = Microsoft.VisualBasic.Interaction.InputBox($"Ingrese el valor para  {data.Columns[i]}", "CONSULTA", "", 1000, 0);
+                    string entrada = Microsoft.VisualBasic.Interaction.InputBox("Si quieres ver el arbol escribe: PRINT" + "\nSi quiere salir del Arbol ingrese: END" + "\n" + "\nSi quiere realizar una prediccion:" + "\n" +  $"Ingrese el valor para  {data.Columns[i]}", "CONSULTA", "", 500, 300);
                     var input = entrada.TrimStart().TrimEnd();
 
                     if (input.ToUpper().Equals("PRINT"))
-                    {/*
-                         Console.WriteLine();
-                         Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper());
-                         MessageBox.Show("Due to the limitation of the console the tree is displayed as a list of every possible route. The colors indicate the following values:");
+                    {
+                        //MessageBox.Show(Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper()));
+                        PrintTree pt = new PrintTree(Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper()));
+                        pt.ShowDialog();
 
-                         i--;*/
+                        i--;
+                        
                     }else if (input.ToUpper().Equals("END"))
                     {
                         exit = true;
@@ -377,7 +386,7 @@ namespace Student_Performance.Gui
                     }
                     else
                     {
-                        MessageBox.Show(Tree.Print(null, result), "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(Tree.PrintResult(null, result), "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
 

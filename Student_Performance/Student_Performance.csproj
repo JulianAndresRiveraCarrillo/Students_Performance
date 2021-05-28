@@ -71,6 +71,12 @@
     <Compile Include="Gui\PrincipalWindow.Designer.cs">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\PrintTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\PrintTree.Designer.cs">
+      <DependentUpon>PrintTree.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\Program.cs" />
     <Compile Include="Gui\Report.cs">
       <SubType>Form</SubType>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gui\PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\PrintTree.resx">
+      <DependentUpon>PrintTree.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
