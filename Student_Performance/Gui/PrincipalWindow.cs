@@ -262,23 +262,20 @@ namespace Student_Performance.Gui
 
         private void btn_arbol_libreria_Click(object sender, EventArgs e)
         {
-            /*loadData.ShowDialog();
+            loadData.ShowDialog();
             string path = loadData.FileName;
-            file = path;*/
+            file = path;
             string variable1 = comboBoxVariable1.Text;
             string variable2 = comboBoxVariable2.Text;
             string variable3 = comboBoxVariable3.Text;
 
-            if(variable1==""|| variable2=="" || variable3=="")
+            if (variable1 == "" || variable2 == "" || variable3 == "")
             {
                 MessageBox.Show("Agrega las 3 variables de entrada.", "Lo sentimos");
-            }else if (manager.GetDataTable().Rows.Count==0)
-            {
-                MessageBox.Show("Agrega la base de datos", "Lo sentimos");
             }
             else
             {
-                crear_arbol_libreria("path", variable1, variable2,variable3);
+                crear_arbol_libreria(path, variable1, variable2, variable3);
             }
 
         }
@@ -295,7 +292,7 @@ namespace Student_Performance.Gui
                     while (!reader.EndOfStream)
                     {
                         var line = reader.ReadLine();
-                        var values = line.Substring(0, line.Length - 1).Split(';');
+                        var values = line.Substring(0, line.Length - 1).Split(',');
 
                         foreach (var item in values)
                         {
@@ -395,18 +392,18 @@ namespace Student_Performance.Gui
 
         private void crear_arbol_libreria(String path, string variable1, string variable2, String variable3)
         { 
-            /*DataManager dataTesting = new DataManager();
-            dataTesting.createTable("Student_Performance/Data/exams_training.csv");
-            DataTable dataset = dataTesting.GetDataTable();*/
+            DataManager dataTesting = new DataManager();
+            dataTesting.createTable(path);
+            DataTable dataset = dataTesting.GetDataTable();
 
             //DataTable dataset = dividir_datatable(0, manager.GetDataTable());
-            DataTable dataset = manager.GetDataTable().Copy();
+           // DataTable dataset = manager.GetDataTable().Copy();
             var codebook = new Codification(dataset);
 
             // Translate our training data into integer symbols using our codebook:
             DataTable symbols = codebook.Apply(dataset);
             int[][] inputs = symbols.ToArray<int>("race/ethnicity", "lunch", "test preparation course");
-            int[] outputs = symbols.ToArray<int>("output");
+            int[] outputs = symbols.ToArray<int>("pass exam");
 
             var id3learning = new ID3Learning()
             {
@@ -440,7 +437,7 @@ namespace Student_Performance.Gui
             int predicted = tree.Decide(query);  // result will be 0
 
             // We can translate it back to strings using
-            string answer = codebook.Revert("output", predicted); // Answer will be: "No"
+            string answer = codebook.Revert("pass exam", predicted); // Answer will be: "No"
 
             MessageBox.Show("La predicción para las variables "+variable1+" - "+variable2+" - "+variable3+" es:\n"+answer, "Predicción");
             //Console.WriteLine(answer);

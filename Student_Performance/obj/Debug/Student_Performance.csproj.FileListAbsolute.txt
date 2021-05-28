@@ -48,3 +48,5 @@ J:\Proyecto Integrador 1\Students_Performance\Student_Performance\bin\Debug\Acco
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.CopyComplete
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.ResolveComReference.cache
 J:\Proyecto Integrador 1\Students_Performance\Student_Performance\obj\Debug\Student_Performance.Gui.PrintTree.resources
+C:\Users\icesi\Source\Repos\Students_Performance\Student_Performance\obj\Debug\Student_Performance.csproj.ResolveComReference.cache
+C:\Users\icesi\Source\Repos\Students_Performance\Student_Performance\obj\Debug\Student_Performance.Gui.PrintTree.resources
