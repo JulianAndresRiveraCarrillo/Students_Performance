@@ -50,7 +50,7 @@ The link of the presentation of this stage is this :point_right: [link](https://
 The link of the presentation of this stage is this :point_right: [link](https://youtu.be/IsppVrtlTTI) :point_left:
 
 ## Video Presentation #3
-The link of the presentation of this stage is this :point_right: [link]() :point_left:
+The link of the presentation of this stage is this :point_right: [link](https://youtu.be/fX8yXIreJXs) :point_left:
 
 ## Video Presentation #4
 The link of the presentation of this stage is this :point_right: [link]() :point_left:
