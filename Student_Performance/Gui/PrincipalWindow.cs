@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Windows.Forms;
 using Accord.MachineLearning.DecisionTrees;
 using Accord.MachineLearning.DecisionTrees.Learning;
@@ -336,11 +337,15 @@ namespace Student_Performance.Gui
 
         private static void CreateTreeAndHandleUserOperation(DataTable data)
         {
+            Stopwatch timeMeasure = new Stopwatch();
+            timeMeasure.Start();
             var decisionTree = new Tree();
             decisionTree.Root = Tree.Learn(data, "");
             bool exit = false;
-
+            
+            timeMeasure.Stop();
             MessageBox.Show("Arbol de decision creado","INFORMACION",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            timeMeasure.Start();
             
             do
             {
@@ -349,14 +354,18 @@ namespace Student_Performance.Gui
                 // Bucle para la entrada de datos para la consulta 
                 for (var i = 0; i < data.Columns.Count - 1; i++)
                 {
+                    timeMeasure.Stop();
                     string entrada = Microsoft.VisualBasic.Interaction.InputBox("Si quieres ver el arbol escribe: PRINT" + "\nSi quiere salir del Arbol ingrese: END" + "\n" + "\nSi quiere realizar una prediccion:" + "\n" +  $"Ingrese el valor para  {data.Columns[i]}", "CONSULTA", "", 500, 300);
+                    timeMeasure.Start();
                     var input = entrada.TrimStart().TrimEnd();
 
                     if (input.ToUpper().Equals("PRINT"))
                     {
                         //MessageBox.Show(Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper()));
                         PrintTree pt = new PrintTree(Tree.Print(decisionTree.Root, decisionTree.Root.Name.ToUpper()));
+                        timeMeasure.Stop();
                         pt.ShowDialog();
+                        timeMeasure.Start();
 
                         i--;
                         
@@ -377,11 +386,17 @@ namespace Student_Performance.Gui
 
                     if (result.Contains("Atributo no encontrado"))
                     {
+                        timeMeasure.Stop();
                         MessageBox.Show("No se puede calcular el resultado. No se encontró una ruta válida a través del árbol.", "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        timeMeasure.Start();
+                        MessageBox.Show($"Tiempo del arbol propio: {timeMeasure.Elapsed.TotalMilliseconds} ms");
                     }
                     else
                     {
+                        timeMeasure.Stop();
                         MessageBox.Show(Tree.PrintResult(null, result), "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        timeMeasure.Start();
+                        MessageBox.Show($"Tiempo del arbol propio: {timeMeasure.Elapsed.TotalMilliseconds} ms");
                     }
                 }
 
