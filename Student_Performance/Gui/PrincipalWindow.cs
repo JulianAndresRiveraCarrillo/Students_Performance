@@ -262,9 +262,7 @@ namespace Student_Performance.Gui
 
         private void btn_arbol_libreria_Click(object sender, EventArgs e)
         {
-            loadData.ShowDialog();
-            string path = loadData.FileName;
-            file = path;
+
             string variable1 = comboBoxVariable1.Text;
             string variable2 = comboBoxVariable2.Text;
             string variable3 = comboBoxVariable3.Text;
@@ -275,7 +273,7 @@ namespace Student_Performance.Gui
             }
             else
             {
-                crear_arbol_libreria(path, variable1, variable2, variable3);
+                crear_arbol_libreria("No", variable1, variable2, variable3);
             }
 
         }
@@ -392,12 +390,12 @@ namespace Student_Performance.Gui
 
         private void crear_arbol_libreria(String path, string variable1, string variable2, String variable3)
         { 
-            DataManager dataTesting = new DataManager();
-            dataTesting.createTable(path);
-            DataTable dataset = dataTesting.GetDataTable();
+            //DataManager dataTesting = new DataManager();
+            //dataTesting.createTable(path);
+            //DataTable dataset = dataTesting.GetDataTable();
 
             //DataTable dataset = dividir_datatable(0, manager.GetDataTable());
-           // DataTable dataset = manager.GetDataTable().Copy();
+            DataTable dataset = manager.GetDataTable().Copy();
             var codebook = new Codification(dataset);
 
             // Translate our training data into integer symbols using our codebook:
