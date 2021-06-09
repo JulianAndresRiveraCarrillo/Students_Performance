@@ -15,11 +15,12 @@ The Ministry of Education at this time is already in the second stage of the pro
 
 
 ## Important documents :page_with_curl:	:bookmark_tabs:
-- [ **Funtional requirements** ](https://docs.google.com/document/d/1kjheYaw0f0OE7OHN7IJmPgISDKB7Irt8vXzq28fp9zE/edit)
-- [ **No Funtional requirements** ](https://docs.google.com/document/d/1KfjjfUOnYAS4wksXGwnv0OQebtJM4IWTe7q7Xt3L9OY/edit?usp=sharing)
+- [ **Funtional requirements** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/REQUERIMIENTOS%20FUNCIONALES.pdf)
+- [ **No Funtional requirements** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/Requerimientos%20No%20Funcionales.pdf)
 - [ **Class Diagram** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/Student_Performance%20Class%20Diagram.pdf)
 - [ **Object Diagram** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/Object%20Diagram.pdf)
-- [ **Engineering Method** ](https://docs.google.com/document/d/1iu-uSYl-XtB6AjygmmitAnvQhwXgfxVkvtxycI4IwGQ/edit)
+- [ **Engineering Method** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/Metodo%20de%20ingenieria%20.pdf)
+- [ **Experiment Design** ](https://github.com/JulianAndresRiveraCarrillo/Students_Performance/blob/main/Student_Performance/DOCS/Diseño%20Experimento.xlsx)
 
 ## Visuals :camera::camera_flash:
 ![0](https://user-images.githubusercontent.com/47890788/118411867-67397f80-b65c-11eb-87e3-ff4e7a659080.jpeg)
