@@ -388,14 +388,12 @@ namespace Student_Performance.Gui
                     {
                         timeMeasure.Stop();
                         MessageBox.Show("No se puede calcular el resultado. No se encontró una ruta válida a través del árbol.", "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                        timeMeasure.Start();
                         MessageBox.Show($"Tiempo del arbol propio: {timeMeasure.Elapsed.TotalMilliseconds} ms");
                     }
                     else
                     {
                         timeMeasure.Stop();
                         MessageBox.Show(Tree.PrintResult(null, result), "RESULTADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        timeMeasure.Start();
                         MessageBox.Show($"Tiempo del arbol propio: {timeMeasure.Elapsed.TotalMilliseconds} ms");
                     }
                 }
@@ -405,6 +403,8 @@ namespace Student_Performance.Gui
 
         private void crear_arbol_libreria(String path, string variable1, string variable2, String variable3)
         { 
+            Stopwatch timeMeasure = new Stopwatch();
+            timeMeasure.Start();
             //DataManager dataTesting = new DataManager();
             //dataTesting.createTable(path);
             //DataTable dataset = dataTesting.GetDataTable();
@@ -433,7 +433,9 @@ namespace Student_Performance.Gui
             // Compute the training error when predicting training instances
             double error = new ZeroOneLoss(outputs).Loss(tree.Decide(inputs));
             labelErrorTesting.Text =error + "";
+            timeMeasure.Stop();
             MessageBox.Show("El árbol ya aprendió con los datos de entrenamiento.", "Training Data");
+            timeMeasure.Start();
 
 
             // The tree can now be queried for new examples through 
@@ -452,7 +454,9 @@ namespace Student_Performance.Gui
             // We can translate it back to strings using
             string answer = codebook.Revert("pass exam", predicted); // Answer will be: "No"
 
+            timeMeasure.Stop();
             MessageBox.Show("La predicción para las variables "+variable1+" - "+variable2+" - "+variable3+" es:\n"+answer, "Predicción");
+            MessageBox.Show($"Tiempo del arbol propio: {timeMeasure.Elapsed.TotalMilliseconds} ms");
             //Console.WriteLine(answer);
         }
 
